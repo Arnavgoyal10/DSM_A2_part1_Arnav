@@ -1,0 +1,1826 @@
+[
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Media",
+    "cityMeanStars": 3.5625
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Doylestown",
+    "cityMeanStars": 3.727272727272727
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Philadelphia",
+    "cityMeanStars": 3.8557692307692304
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Springfield",
+    "cityMeanStars": 3.2
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Wayne",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Drexel Hill",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Broomall",
+    "cityMeanStars": 2.8333333333333335
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Wilmington",
+    "cityMeanStars": 3.6666666666666665
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Newtown Square",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Glen Mills",
+    "cityMeanStars": 3.8
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Sellersville",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Aston",
+    "cityMeanStars": 3.7777777777777777
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Brookhaven",
+    "cityMeanStars": 3.2
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Blue Bell",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Paoli",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Ardmore",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Newtown",
+    "cityMeanStars": 3.6666666666666665
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "King of Prussia",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Chalfont",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Buckingham",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Upper Darby",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Primos",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Dublin",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Willow Grove",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Devon",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Bala Cynwyd",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Chadds Ford",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Newark",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "East Norriton",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Jenkintown",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "King Of Prussia",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Feasterville-Trevose",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Haddonfield",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Montgomeryville",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Bryn Mawr",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Malvern",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Karen",
+    "distinctCities": 37,
+    "city": "Kennett Square",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Newtown",
+    "cityMeanStars": 3.947368421052632
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Huntingdon Valley",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Philadelphia",
+    "cityMeanStars": 4.0740740740740735
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Doylestown",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Phoenixville",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Willow Grove",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Trenton",
+    "cityMeanStars": 3.6363636363636362
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Warminster",
+    "cityMeanStars": 2.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Hatboro",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Bensalem",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Fairless Hills",
+    "cityMeanStars": 3.75
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Richboro",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Norristown",
+    "cityMeanStars": 2.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Holland",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Feasterville-Trevose",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Morrisville",
+    "cityMeanStars": 2.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Bordentown",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Levittown",
+    "cityMeanStars": 3.3333333333333335
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Langhorne",
+    "cityMeanStars": 3.6
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Yardley",
+    "cityMeanStars": 2.5
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Churchville",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Ewing",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Glenside",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Feasterville",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Washington Crossing",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Riverside",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Bristol",
+    "cityMeanStars": 4.5
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Ardmore",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Mercerville",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Westampton",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Collingswood",
+    "cityMeanStars": 2.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "East Norriton",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Blue Bell",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Southampton",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Gerald",
+    "distinctCities": 35,
+    "city": "Hamilton Township",
+    "cityMeanStars": 1.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Glassboro",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Clementon",
+    "cityMeanStars": 4.25
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Mount Laurel",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Voorhees",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "West Berlin",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Runnemede",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Somerdale",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Voorhees Township",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Marlton",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Maple Shade",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Doylestown",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Philadelphia",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Cherry Hill",
+    "cityMeanStars": 4.333333333333333
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Moorestown",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Medford",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Deptford Township",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Trenton",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Atco",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Glendora",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Sicklerville",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Pennsville",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Mt. Laurel",
+    "cityMeanStars": 2.5
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Lawnside",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Williamstown",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Burlington",
+    "cityMeanStars": 2.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Gibbsboro",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Camden",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "West Deptford",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Deptford",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Turnersville",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Berlin",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Collingswood",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Woodbury",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Gloucester Township",
+    "cityMeanStars": 4.5
+  },
+  {
+    "userName": "Tricia",
+    "distinctCities": 35,
+    "city": "Blackwood",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Exton",
+    "cityMeanStars": 4.4
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "East Norriton",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Glen Mills",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Malvern",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Ardmore",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Bryn Mawr",
+    "cityMeanStars": 3.6666666666666665
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Royersford",
+    "cityMeanStars": 3.3333333333333335
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Wayne",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Phoenixville",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Devon",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "West Chester",
+    "cityMeanStars": 4.166666666666667
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Philadelphia",
+    "cityMeanStars": 3.6666666666666665
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Dresher",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Broomall",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Bridgeport",
+    "cityMeanStars": 4.333333333333333
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "King of Prussia",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Berwyn",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Hatboro",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "King Of Prussia",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Norristown",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Trenton",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Wynnewood",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Radnor",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Bensalem",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Newtown Square",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Saint Louis",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Trooper",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Paoli",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Plymouth Meeting",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Collegeville",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Craig",
+    "distinctCities": 31,
+    "city": "Wilmington",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Voorhees",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Media",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Cherry Hill",
+    "cityMeanStars": 4.6
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Philadelphia",
+    "cityMeanStars": 3.875
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Drexel Hill",
+    "cityMeanStars": 3.6666666666666665
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Springfield",
+    "cityMeanStars": 2.6666666666666665
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Bensalem",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Primos",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Brookhaven",
+    "cityMeanStars": 2.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Primos-Secane",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Mount Ephraim",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Woodbury",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Newark",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Havertown",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Newtown Square",
+    "cityMeanStars": 2.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Woodbury Heights",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Wilmington",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Folsom",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Exton",
+    "cityMeanStars": 3.3333333333333335
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Mullica Hill",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Broomall",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Eddystone",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Downingtown",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Pennsauken",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Swarthmore",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "West Chester",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Malvern",
+    "cityMeanStars": 2.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Narberth",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Wayne",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "Wynnewood",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "P",
+    "distinctCities": 31,
+    "city": "King of Prussia",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Phoenixville",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Blue Bell",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Bryn Mawr",
+    "cityMeanStars": 3.3333333333333335
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Warrington",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Wayne",
+    "cityMeanStars": 4.2
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Jenkintown",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Philadelphia",
+    "cityMeanStars": 3.6774193548387104
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "King of Prussia",
+    "cityMeanStars": 3.833333333333333
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Conshohocken",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "West Chester",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Media",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Norristown",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Trappe",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Willow Grove",
+    "cityMeanStars": 3.3333333333333335
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Newark",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Bridgeport",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Hatboro",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "East Norriton",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "King Of Prussia",
+    "cityMeanStars": 1.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Oaks",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Paoli",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Montgomeryville",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Skippack",
+    "cityMeanStars": 2.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Moorestown",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Ardmore",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Cherry Hill",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Plymouth Meeting",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Abington",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dave",
+    "distinctCities": 29,
+    "city": "Buckingham",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Chadds Ford",
+    "cityMeanStars": 4.5
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Broomall",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Philadelphia",
+    "cityMeanStars": 4.476190476190475
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "West Chester",
+    "cityMeanStars": 4.666666666666667
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Marlton",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Aston",
+    "cityMeanStars": 4.333333333333333
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Wilmington",
+    "cityMeanStars": 4.666666666666667
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Mount Ephraim",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Glenolden",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Trappe",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Mendenhall",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Ridley Park",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Folcroft",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Paoli",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Bryn Mawr",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Exton",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Claymont",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Hockessin",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Media",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Brookhaven",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Pennsville",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Malvern",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Feasterville-Trevose",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Haddon Heights",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Bridgeport",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Ardmore",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Oaklyn",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Norristown",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "James",
+    "distinctCities": 29,
+    "city": "Bristol",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Palm Harbor",
+    "cityMeanStars": 3.8
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Temple Terrace",
+    "cityMeanStars": 2.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Oldsmar",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Tampa",
+    "cityMeanStars": 3.7777777777777777
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Tarpon Springs",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Port Richey",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Pinellas Park",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Clearwater",
+    "cityMeanStars": 3.714285714285714
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Holiday",
+    "cityMeanStars": 4.5
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Saint Petersburg",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Safety Harbor",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Dunedin",
+    "cityMeanStars": 4.333333333333333
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "TAMPA",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Nashville",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "NEW PORT RICHEY",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "New Port Richey",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Hudson",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Odessa",
+    "cityMeanStars": 4.25
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Largo",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Trinity",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "St Petersburg",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "King Of Prussia",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Dade City",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "St. Petersburg",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Land O' Lakes",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Dianna",
+    "distinctCities": 26,
+    "city": "Brandon",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Wayne",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Springfield",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "West Chester",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Glenolden",
+    "cityMeanStars": 3.666666666666666
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Norristown",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Prospect Park",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Philadelphia",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "New Castle",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Malvern",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Exton",
+    "cityMeanStars": 4.5
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Ridley Park",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Secane",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "King of Prussia",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Brookhaven",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Glendora",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Paoli",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Newtown Square",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Folsom",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Media",
+    "cityMeanStars": 3.3333333333333335
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Lansdowne",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Essington",
+    "cityMeanStars": 2.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Primos",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Darby",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Broomall",
+    "cityMeanStars": 2.5
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Drexel Hill",
+    "cityMeanStars": 4.333333333333333
+  },
+  {
+    "userName": "Steve",
+    "distinctCities": 26,
+    "city": "Collingdale",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Cherry Hill",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Philadelphia",
+    "cityMeanStars": 3.8636363636363638
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Glassboro",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Pitman",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Haddonfield",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Williamstown",
+    "cityMeanStars": 2.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "New Orleans",
+    "cityMeanStars": 4.25
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Lahaska",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Bryn Mawr",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Westmont",
+    "cityMeanStars": 3.5
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Sewell",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Collingswood",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Kenner",
+    "cityMeanStars": 2.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Runnemede",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Voorhees",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Merchantville",
+    "cityMeanStars": 5.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Woolwich Twp",
+    "cityMeanStars": 2.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Turnersville",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Swedesboro",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Mullica Hill",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Newark",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Woodstown",
+    "cityMeanStars": 3.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Ardmore",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Medford",
+    "cityMeanStars": 4.0
+  },
+  {
+    "userName": "Kathleen",
+    "distinctCities": 25,
+    "city": "Bala Cynwyd",
+    "cityMeanStars": 5.0
+  }
+]

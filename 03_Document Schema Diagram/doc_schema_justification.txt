@@ -1,0 +1,8 @@
+Document Schema Diagram Justifications
+
+Unlike a theoretical relationship model, the Document Schema Diagram physically defines MongoDB's exact internal JSON hierarchical grouping. 
+
+Key Structural Decisions Shown:
+1. Sub-Documents and Arrays (Embedding): The diagram explicitly annotates that certain features are fully embedded. For example, `categories` inside Business, `friends` inside User, and `elite` inside User are stored strictly as `Array[Type]`. The `attributes` field is modeled comprehensively as a nested SubDocument `{...}` to flexibly store business-specific features (e.g., WiFi, Parking). We strictly embedded these bounded arrays to prevent the need for expensive `$lookup` joins, ensuring single-seek retrieval performance.
+2. Key vs. Ref Modifiers: We strictly labeled native identifier keys (like `user_id`) using "(Key)" tags, and relational identifiers (foreign keys) using "(Ref)" tags. This distinguishes how internal object identifiers differ fundamentally from cross-collection relational pointers.
+3. Reference Vectors: The dashed arrows visually map the cross-collection referencing implemented to resolve our data relations while obeying the strict 16MB document size boundaries. This accurately signals to a database architect that joins (`$lookup`) must be calculated across these specific vector links to avoid the "unbound document growth" penalties of embedding.

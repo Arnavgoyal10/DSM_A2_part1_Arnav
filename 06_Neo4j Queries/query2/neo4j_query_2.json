@@ -1,0 +1,557 @@
+[
+  {
+    "state": "AB",
+    "businessName": "Made By Marcus",
+    "categories": [
+      "Food",
+      "Ice Cream & Frozen Yogurt"
+    ],
+    "city": "Edmonton",
+    "avgStars": 4.5
+  },
+  {
+    "state": "AB",
+    "businessName": "Yelo'd Ice Cream",
+    "categories": [
+      "Food",
+      "Bakeries",
+      "Ice Cream & Frozen Yogurt"
+    ],
+    "city": "Edmonton",
+    "avgStars": 4.5
+  },
+  {
+    "state": "AB",
+    "businessName": "Numchok Wilai",
+    "categories": [
+      "Restaurants",
+      "Thai"
+    ],
+    "city": "Edmonton",
+    "avgStars": 4.5
+  },
+  {
+    "state": "AZ",
+    "businessName": "Selah",
+    "categories": [
+      "Beauty & Spas",
+      "Hair Removal",
+      "Skin Care",
+      "Waxing",
+      "Eyelash Service"
+    ],
+    "city": "Tucson",
+    "avgStars": 5.0
+  },
+  {
+    "state": "AZ",
+    "businessName": "Key One",
+    "categories": [
+      "Home Services",
+      "Keys & Locksmiths"
+    ],
+    "city": "Tucson",
+    "avgStars": 5.0
+  },
+  {
+    "state": "AZ",
+    "businessName": "Fox In a Box Tucson",
+    "categories": [
+      "Active Life",
+      "Arts & Entertainment",
+      "Escape Games"
+    ],
+    "city": "Tucson",
+    "avgStars": 5.0
+  },
+  {
+    "state": "CA",
+    "businessName": "Dawna Ara, DACM, LAc",
+    "categories": [
+      "Traditional Chinese Medicine",
+      "Acupuncture",
+      "Health & Medical",
+      "Beauty & Spas",
+      "Skin Care",
+      "Massage"
+    ],
+    "city": "Santa Barbara",
+    "avgStars": 5.0
+  },
+  {
+    "state": "CA",
+    "businessName": "Urban Optics Optometric Center",
+    "categories": [
+      "Doctors",
+      "Health & Medical",
+      "Shopping",
+      "Ophthalmologists",
+      "Eyewear & Opticians",
+      "Optometrists",
+      "Laser Eye Surgery/Lasik",
+      "Sunglasses"
+    ],
+    "city": "Santa Barbara",
+    "avgStars": 5.0
+  },
+  {
+    "state": "CA",
+    "businessName": "Carpinteria Lock & Key",
+    "categories": [
+      "Home Services",
+      "Keys & Locksmiths",
+      "Security Systems"
+    ],
+    "city": "Carpinteria",
+    "avgStars": 5.0
+  },
+  {
+    "state": "DE",
+    "businessName": "Luigi's Cafe",
+    "categories": [
+      "Restaurants",
+      "Italian",
+      "Pizza",
+      "Salad",
+      "Cheesesteaks"
+    ],
+    "city": "Hockessin",
+    "avgStars": 4.5
+  },
+  {
+    "state": "DE",
+    "businessName": "Masala Kitchen",
+    "categories": [
+      "Restaurants",
+      "Food",
+      "Specialty Food",
+      "Fruits & Veggies",
+      "Vegan",
+      "Ethnic Food",
+      "Vegetarian",
+      "Indian"
+    ],
+    "city": "New Castle",
+    "avgStars": 4.5
+  },
+  {
+    "state": "DE",
+    "businessName": "Saap Lao Thai Cuisine",
+    "categories": [
+      "Restaurants",
+      "Thai",
+      "Laotian"
+    ],
+    "city": "New Castle",
+    "avgStars": 4.5
+  },
+  {
+    "state": "FL",
+    "businessName": "Island Fin Poké",
+    "categories": [
+      "Restaurants",
+      "Food",
+      "Hawaiian",
+      "Gluten-Free",
+      "Poke"
+    ],
+    "city": "Tampa",
+    "avgStars": 5.0
+  },
+  {
+    "state": "FL",
+    "businessName": "Clayman Thyroid Center",
+    "categories": [
+      "Doctors",
+      "Health & Medical",
+      "Oncologist",
+      "Surgeons"
+    ],
+    "city": "Town 'n' Country",
+    "avgStars": 5.0
+  },
+  {
+    "state": "FL",
+    "businessName": "Simply Done Donuts",
+    "categories": [
+      "Food",
+      "Coffee & Tea",
+      "Event Planning & Services",
+      "Caterers",
+      "Donuts"
+    ],
+    "city": "Tampa",
+    "avgStars": 5.0
+  },
+  {
+    "state": "ID",
+    "businessName": "Madre - Boutique Taqueria",
+    "categories": [
+      "Restaurants",
+      "Food",
+      "Breakfast & Brunch",
+      "Event Planning & Services",
+      "Beer",
+      "Wine & Spirits",
+      "Mexican",
+      "Tacos",
+      "Personal Chefs"
+    ],
+    "city": "Boise",
+    "avgStars": 4.5
+  },
+  {
+    "state": "ID",
+    "businessName": "Casa Bella Salon and Spa",
+    "categories": [
+      "Health & Medical",
+      "Hair Salons",
+      "Beauty & Spas",
+      "Skin Care",
+      "Massage",
+      "Nail Salons",
+      "Massage Therapy"
+    ],
+    "city": "Meridian",
+    "avgStars": 4.5
+  },
+  {
+    "state": "ID",
+    "businessName": "Goody's Soda Fountain & Candy Store",
+    "categories": [
+      "Food",
+      "Coffee & Tea",
+      "Ice Cream & Frozen Yogurt",
+      "Specialty Food",
+      "Candy Stores",
+      "Desserts"
+    ],
+    "city": "Boise",
+    "avgStars": 4.5
+  },
+  {
+    "state": "IL",
+    "businessName": "The Wine Tap",
+    "categories": [
+      "Restaurants",
+      "Italian",
+      "Bars",
+      "Nightlife",
+      "Wine Bars"
+    ],
+    "city": "Belleville",
+    "avgStars": 4.5
+  },
+  {
+    "state": "IL",
+    "businessName": "Super Gyros",
+    "categories": [
+      "Restaurants",
+      "Fast Food",
+      "Italian",
+      "Greek"
+    ],
+    "city": "Belleville",
+    "avgStars": 4.5
+  },
+  {
+    "state": "IL",
+    "businessName": "Catrina's",
+    "categories": [
+      "Restaurants",
+      "Bars",
+      "Nightlife",
+      "Cocktail Bars",
+      "Mexican",
+      "Latin American"
+    ],
+    "city": "Edwardsville",
+    "avgStars": 4.0
+  },
+  {
+    "state": "IN",
+    "businessName": "David Electric Service",
+    "categories": [
+      "Local Services",
+      "Home Services",
+      "Contractors",
+      "TV Mounting",
+      "Lighting Fixtures & Equipment",
+      "Electricians",
+      "Generator Installation/Repair",
+      "Home Network Installation"
+    ],
+    "city": "Indianapolis",
+    "avgStars": 5.0
+  },
+  {
+    "state": "IN",
+    "businessName": "Indy Massage Company",
+    "categories": [
+      "Health & Medical",
+      "Beauty & Spas",
+      "Hair Removal",
+      "Skin Care",
+      "Massage",
+      "Waxing",
+      "Massage Therapy"
+    ],
+    "city": "Indianapolis",
+    "avgStars": 5.0
+  },
+  {
+    "state": "IN",
+    "businessName": "Che Chori Foods",
+    "categories": [
+      "Restaurants",
+      "Food",
+      "Burgers",
+      "Pizza",
+      "Empanadas",
+      "Argentine"
+    ],
+    "city": "Indianapolis",
+    "avgStars": 5.0
+  },
+  {
+    "state": "LA",
+    "businessName": "Ernie's Tours",
+    "categories": [
+      "Hotels & Travel",
+      "Tours",
+      "Walking Tours",
+      "Historical Tours"
+    ],
+    "city": "New Orleans",
+    "avgStars": 5.0
+  },
+  {
+    "state": "LA",
+    "businessName": "The Mona Lisa Lounge",
+    "categories": [
+      "Bars",
+      "Nightlife"
+    ],
+    "city": "Westwego",
+    "avgStars": 5.0
+  },
+  {
+    "state": "LA",
+    "businessName": "Le Monde Creole",
+    "categories": [
+      "Hotels & Travel",
+      "Tours"
+    ],
+    "city": "New Orleans",
+    "avgStars": 5.0
+  },
+  {
+    "state": "MO",
+    "businessName": "Top Notch Axe Throwing - St Louis",
+    "categories": [
+      "Bars",
+      "Nightlife",
+      "Active Life",
+      "Arts & Entertainment",
+      "Axe Throwing"
+    ],
+    "city": "St. Louis",
+    "avgStars": 5.0
+  },
+  {
+    "state": "MO",
+    "businessName": "Blueprint Coffee",
+    "categories": [
+      "Food",
+      "Coffee & Tea",
+      "Coffee Roasteries"
+    ],
+    "city": "St Louis",
+    "avgStars": 4.5
+  },
+  {
+    "state": "MO",
+    "businessName": "The Fountain On Locust",
+    "categories": [
+      "Shopping",
+      "Restaurants",
+      "Food",
+      "Ice Cream & Frozen Yogurt",
+      "Bars",
+      "Nightlife",
+      "Cocktail Bars",
+      "Arts & Entertainment",
+      "Specialty Food",
+      "American (New)",
+      "Chocolatiers & Shops",
+      "Art Galleries"
+    ],
+    "city": "Saint Louis",
+    "avgStars": 4.5
+  },
+  {
+    "state": "NJ",
+    "businessName": "Versi Vino",
+    "categories": [
+      "Restaurants",
+      "Food",
+      "Italian",
+      "Bars",
+      "Nightlife",
+      "Wine Bars",
+      "Education",
+      "American (New)",
+      "Beer",
+      "Wine & Spirits",
+      "Wine Tasting Classes",
+      "Tasting Classes"
+    ],
+    "city": "Maple Shade",
+    "avgStars": 5.0
+  },
+  {
+    "state": "NJ",
+    "businessName": "Eclipse Brewing",
+    "categories": [
+      "Food",
+      "Breweries"
+    ],
+    "city": "Merchantville",
+    "avgStars": 5.0
+  },
+  {
+    "state": "NJ",
+    "businessName": "Classic Asia",
+    "categories": [
+      "Restaurants",
+      "Japanese",
+      "Asian Fusion",
+      "Chinese"
+    ],
+    "city": "Haddon Heights",
+    "avgStars": 4.5
+  },
+  {
+    "state": "NV",
+    "businessName": "Orangetheory Fitness Reno",
+    "categories": [
+      "Active Life",
+      "Fitness & Instruction",
+      "Trainers",
+      "Gyms",
+      "Boot Camps",
+      "Cardio Classes",
+      "Interval Training Gyms"
+    ],
+    "city": "Reno",
+    "avgStars": 5.0
+  },
+  {
+    "state": "NV",
+    "businessName": "Sip of Saigon",
+    "categories": [
+      "Restaurants",
+      "Food",
+      "Coffee & Tea",
+      "Vietnamese",
+      "Cafes"
+    ],
+    "city": "Spanish Springs",
+    "avgStars": 5.0
+  },
+  {
+    "state": "NV",
+    "businessName": "Food + Drink",
+    "categories": [
+      "Restaurants",
+      "Food",
+      "Italian",
+      "Bars",
+      "Nightlife",
+      "Breakfast & Brunch",
+      "Cocktail Bars",
+      "Pizza",
+      "Mexican",
+      "Desserts",
+      "Tacos",
+      "Waffles"
+    ],
+    "city": "Reno",
+    "avgStars": 5.0
+  },
+  {
+    "state": "PA",
+    "businessName": "Trend Eye Care",
+    "categories": [
+      "Health & Medical",
+      "Shopping",
+      "Fashion",
+      "Accessories",
+      "Eyewear & Opticians",
+      "Optometrists"
+    ],
+    "city": "Philadelphia",
+    "avgStars": 5.0
+  },
+  {
+    "state": "PA",
+    "businessName": "Birchtree Catering",
+    "categories": [
+      "Event Planning & Services",
+      "Caterers",
+      "Local Flavor",
+      "Wedding Planning"
+    ],
+    "city": "Philadelphia",
+    "avgStars": 5.0
+  },
+  {
+    "state": "PA",
+    "businessName": "Mom Mom's Kitchen and Polish Food Cart",
+    "categories": [
+      "Restaurants",
+      "Food",
+      "Food Trucks",
+      "Street Vendors",
+      "Polish"
+    ],
+    "city": "Philadelphia",
+    "avgStars": 5.0
+  },
+  {
+    "state": "TN",
+    "businessName": "The Movement Chiropractic & Manual Medicine",
+    "categories": [
+      "Health & Medical",
+      "Chiropractors",
+      "Massage Therapy"
+    ],
+    "city": "Franklin",
+    "avgStars": 5.0
+  },
+  {
+    "state": "TN",
+    "businessName": "Parker's Paws Animal Hospital",
+    "categories": [
+      "Pet Services",
+      "Pets",
+      "Veterinarians",
+      "Pet Training",
+      "Pet Stores"
+    ],
+    "city": "Nashville",
+    "avgStars": 5.0
+  },
+  {
+    "state": "TN",
+    "businessName": "Float Nashville",
+    "categories": [
+      "Health & Medical",
+      "Massage Therapy",
+      "Float Spa",
+      "Halotherapy"
+    ],
+    "city": "Nashville",
+    "avgStars": 5.0
+  }
+]

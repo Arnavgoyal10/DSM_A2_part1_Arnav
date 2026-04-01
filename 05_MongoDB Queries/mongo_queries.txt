@@ -1,0 +1,166 @@
+=========================================
+STAGE 4: MONGODB AGGREGATION PIPELINES
+=========================================
+
+// QUERY 1: Safest and Least-Safe Cities & Categories
+// Uses $group to calculate average stars accounting for minimum review volume and business counts.
+db.business.aggregate([
+    { $unwind: "$categories" },
+    { $group: {
+        _id: { city: "$city", category: "$categories" },
+        avg_stars: { $avg: "$stars" },
+        business_count: { $sum: 1 },
+        total_reviews: { $sum: "$review_count" }
+    } },
+    // Account for review volume to prevent noisy outlier data
+    { $match: { business_count: { $gte: 5 }, total_reviews: { $gte: 100 } } },
+    { $sort: { avg_stars: -1 } } // Safest first. Change to 1 for least-safe.
+], { allowDiskUse: true, maxTimeMS: 120000 });
+
+// QUERY 2: Star Rating Trends Over Time (Upward/Downward)
+// Joins reviews to businesses to extract category/city, and extracts the year from the review date.
+db.review.aggregate([
+    { $lookup: {
+        from: "business",
+        localField: "business_id",
+        foreignField: "business_id",
+        as: "biz"
+    } },
+    { $unwind: "$biz" },
+    { $unwind: "$biz.categories" },
+    { $project: {
+        year: { $year: { $toDate: "$date" } },
+        stars: 1,
+        city: "$biz.city",
+        category: "$biz.categories"
+    } },
+    { $group: {
+        _id: { city: "$city", category: "$category", year: "$year" },
+        avg_stars: { $avg: "$stars" },
+        review_count: { $sum: 1 }
+    } },
+    { $match: { review_count: { $gte: 20 } } },
+    { $sort: { "_id.city": 1, "_id.category": 1, "_id.year": 1 } }
+], { allowDiskUse: true, maxTimeMS: 120000 });
+
+// QUERY 3: Correlation between Review Volume and Average Star Rating
+// Uses $bucket to cleanly cluster businesses by their review count ranges.
+db.business.aggregate([
+    { $bucket: {
+        groupBy: "$review_count",
+        boundaries: [0, 20, 100, 500, 2000],
+        default: "2000+",
+        output: {
+            avg_stars: { $avg: "$stars" },
+            business_count: { $sum: 1 }
+        }
+    } }
+], { allowDiskUse: true, maxTimeMS: 120000 });
+
+// QUERY 4: Review Behavior Across Business Categories
+// Compares average review length, useful votes received, and overall stars.
+db.review.aggregate([
+    { $lookup: {
+        from: "business",
+        localField: "business_id",
+        foreignField: "business_id",
+        as: "biz"
+    } },
+    { $unwind: "$biz" },
+    { $unwind: "$biz.categories" },
+    { $group: {
+        _id: "$biz.categories",
+        avg_stars: { $avg: "$stars" },
+        avg_review_length: { $avg: { $strLenCP: { $ifNull: ["$text", ""] } } },
+        avg_useful_votes: { $avg: "$useful" },
+        total_reviews: { $sum: 1 }
+    } },
+    { $match: { total_reviews: { $gte: 500 } } },
+    { $sort: { total_reviews: -1 } }
+], { allowDiskUse: true, maxTimeMS: 120000 });
+
+// QUERY 5: Impact of User Tenure on Reviewing Behavior
+// Subtracts user join date from current date to calculate continuous tenure in years.
+db.review.aggregate([
+    { $lookup: {
+        from: "user",
+        localField: "user_id",
+        foreignField: "user_id",
+        as: "usr"
+    } },
+    { $unwind: "$usr" },
+    { $project: {
+        stars: 1, useful: 1,
+        tenure_years: {
+            $divide: [
+                { $subtract: [ new Date(), { $toDate: "$usr.yelping_since" } ] },
+                1000 * 60 * 60 * 24 * 365
+            ]
+        }
+    } },
+    { $bucket: {
+        groupBy: "$tenure_years",
+        boundaries: [0, 2, 5, 10, 15],
+        default: "15+",
+        output: {
+            avg_stars_given: { $avg: "$stars" },
+            avg_useful_received: { $avg: "$useful" },
+            review_count: { $sum: 1 }
+        }
+    } }
+], { allowDiskUse: true, maxTimeMS: 120000 });
+
+// QUERY 6: Elite vs Non-Elite User Review Statistics
+// Groups users based on whether their elite status array is empty or populated.
+db.review.aggregate([
+    { $lookup: {
+        from: "user",
+        localField: "user_id",
+        foreignField: "user_id",
+        as: "usr"
+    } },
+    { $unwind: "$usr" },
+    { $project: {
+        stars: 1, useful: 1, text: 1,
+        // If elite string is not empty, they are elite
+        is_elite: { $cond: [ { $ne: ["$usr.elite", ""] }, true, false ] }
+    } },
+    { $group: {
+        _id: "$is_elite",
+        avg_stars_given: { $avg: "$stars" },
+        avg_review_length: { $avg: { $strLenCP: { $ifNull: ["$text", ""] } } },
+        avg_useful_received: { $avg: "$useful" },
+        total_reviews: { $sum: 1 }
+    } }
+], { allowDiskUse: true, maxTimeMS: 120000 });
+
+// QUERY 7: Check-in Activity vs Business Star Ratings
+// Links Check-ins to Businesses, counts the number of times dates appear in the comma-separated string, and buckets the results.
+db.business.aggregate([
+    { $lookup: {
+        from: "checkin",
+        localField: "business_id",
+        foreignField: "business_id",
+        as: "chk"
+    } },
+    { $unwind: { path: "$chk", preserveNullAndEmptyArrays: true } },
+    { $project: {
+        stars: 1, categories: 1,
+        checkin_count: {
+            $cond: [
+                { $ifNull: ["$chk.date", false] },
+                { $size: { $split: ["$chk.date", ","] } },
+                0
+            ]
+        }
+    } },
+    { $bucket: {
+        groupBy: "$checkin_count",
+        boundaries: [0, 50, 200, 1000, 5000],
+        default: "5000+",
+        output: {
+            avg_stars: { $avg: "$stars" },
+            business_count: { $sum: 1 }
+        }
+    } }
+], { allowDiskUse: true, maxTimeMS: 120000 });

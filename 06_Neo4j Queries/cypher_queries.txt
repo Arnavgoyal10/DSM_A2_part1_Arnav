@@ -1,0 +1,50 @@
+=========================================
+STAGE 5: NEO4J CYPHER QUERIES
+=========================================
+
+// QUERY 1: 10 Users with highest direct friends (Friend count, overall review count, mean star rating)
+MATCH (u:User)-[f:FRIENDS_WITH]->(friend:User)
+WITH u, count(f) AS friendCount
+ORDER BY friendCount DESC
+LIMIT 10
+OPTIONAL MATCH (u)-[w:WROTE]->(r:Review)
+RETURN u.name AS userName, friendCount, count(r) AS totalReviews, avg(r.stars) AS meanStarsGiven
+
+// QUERY 2: Top 3 businesses by avg star rating matching state parameter (>= 50 reviews)
+MATCH (b:Business)
+WHERE b.review_count >= 50 AND b.state IS NOT NULL
+WITH b.state AS state, b
+ORDER BY b.stars DESC
+WITH state, collect(b)[0..3] AS topBusinesses
+UNWIND topBusinesses AS b
+OPTIONAL MATCH (b)-[:IN_CATEGORY]->(c:Category)
+RETURN state, b.name AS businessName, collect(c.name) AS categories, b.city AS city, b.stars AS avgStars
+ORDER BY state ASC, avgStars DESC
+
+// QUERY 3: 10 Users who reviewed businesses across highest distinct cities
+MATCH (u:User)-[:WROTE]->(r:Review)-[:ABOUT]->(b:Business)
+WITH u, count(DISTINCT b.city) AS distinctCities
+ORDER BY distinctCities DESC
+LIMIT 10
+MATCH (u)-[:WROTE]->(r:Review)-[:ABOUT]->(b:Business)
+WITH u, distinctCities, b.city AS city, avg(r.stars) AS cityMeanStars
+RETURN u.name AS userName, distinctCities, city, cityMeanStars
+ORDER BY distinctCities DESC, userName ASC
+
+// QUERY 4: Users reviewing >= 5 Mexican businesses (Compare Mexican avg stars vs Overall avg stars)
+MATCH (u:User)-[:WROTE]->(r1:Review)-[:ABOUT]->(b1:Business)-[:IN_CATEGORY]->(c:Category {name: 'Mexican'})
+WITH u, c, count(DISTINCT b1) AS mexBizCount
+WHERE mexBizCount >= 5
+MATCH (u)-[:WROTE]->(r_mex:Review)-[:ABOUT]->(:Business)-[:IN_CATEGORY]->(c)
+WITH u, mexBizCount, avg(r_mex.stars) AS meanMexicanStars
+MATCH (u)-[:WROTE]->(r_all:Review)
+RETURN u.name AS userName, mexBizCount, meanMexicanStars, avg(r_all.stars) AS meanOverallStars
+ORDER BY mexBizCount DESC
+
+// QUERY 5: Reproducing Stage 4 Query 1 (Safest/Least-Safe Cities) in Cypher
+MATCH (b:Business)-[:IN_CATEGORY]->(c:Category)
+WITH b.city AS city, c.name AS category, count(b) AS businessCount, sum(b.review_count) AS totalReviews, avg(b.stars) AS avgStars
+WHERE businessCount >= 5 AND totalReviews >= 100
+RETURN city, category, avgStars, businessCount, totalReviews
+ORDER BY avgStars DESC
+LIMIT 10

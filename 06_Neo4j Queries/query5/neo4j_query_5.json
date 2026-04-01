@@ -1,0 +1,72 @@
+[
+  {
+    "city": "Santa Barbara",
+    "category": "Photographers",
+    "avgStars": 5.0,
+    "businessCount": 7,
+    "totalReviews": 184
+  },
+  {
+    "city": "Santa Barbara",
+    "category": "Session Photography",
+    "avgStars": 5.0,
+    "businessCount": 5,
+    "totalReviews": 144
+  },
+  {
+    "city": "Philadelphia",
+    "category": "Massage Therapy",
+    "avgStars": 4.916666666666667,
+    "businessCount": 6,
+    "totalReviews": 556
+  },
+  {
+    "city": "Santa Barbara",
+    "category": "Party & Event Planning",
+    "avgStars": 4.9,
+    "businessCount": 5,
+    "totalReviews": 218
+  },
+  {
+    "city": "Philadelphia",
+    "category": "Dog Walkers",
+    "avgStars": 4.8,
+    "businessCount": 5,
+    "totalReviews": 117
+  },
+  {
+    "city": "Santa Barbara",
+    "category": "Hair Salons",
+    "avgStars": 4.777777777777777,
+    "businessCount": 9,
+    "totalReviews": 226
+  },
+  {
+    "city": "Indianapolis",
+    "category": "Local Flavor",
+    "avgStars": 4.75,
+    "businessCount": 8,
+    "totalReviews": 532
+  },
+  {
+    "city": "Philadelphia",
+    "category": "Makeup Artists",
+    "avgStars": 4.7142857142857135,
+    "businessCount": 7,
+    "totalReviews": 842
+  },
+  {
+    "city": "Santa Barbara",
+    "category": "Flowers & Gifts",
+    "avgStars": 4.7,
+    "businessCount": 5,
+    "totalReviews": 128
+  },
+  {
+    "city": "Indianapolis",
+    "category": "Gift Shops",
+    "avgStars": 4.7,
+    "businessCount": 5,
+    "totalReviews": 301
+  }
+]

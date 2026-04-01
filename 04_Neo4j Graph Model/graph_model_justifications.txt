@@ -1,0 +1,14 @@
+Neo4j Property Graph Model Justification
+
+1. Graph Model Architecture
+In our MongoDB schema, we relied heavily on embedding arrays (like `categories` and `friends`). However, native graph databases like Neo4j fundamentally excel at traversing highly connected data rather than scanning large standalone documents. Therefore, our model explicitly "unrolls" those embedded arrays into entirely new Node labels and Relationships:
+
+- `(:User)-[:FRIENDS_WITH]->(:User)`: Instead of embedding a list of friend IDs inside a User document, we create real structural social network relationships between User nodes. This allows for lightning-fast network traversals (e.g., finding friends-of-friends instantly without array scanning).
+- `(:Business)-[:IN_CATEGORY]->(:Category)`: We promoted categories from a simple embedded string array into a fully distinct `(:Category)` node label. This structurally maps the graph so we can instantly find "all businesses in 'Mexican' and 'Burgers'" simply by traversing outward from a Category node.
+- `(:User)-[:WROTE]->(:Review)-[:ABOUT]->(:Business)`: Reviews are modeled as distinct intermediate nodes rather than merely relationship properties (like `[:REVIEWED {stars: 4}]`) between a user and a business. We do this because a review itself holds dense metadata (text, date, usefulness votes) and serves as an independent first-class entity for analysis in our Stage 5 Cypher queries.
+
+2. Handling Data that Doesn't Map Naturally to a Graph
+Graph databases are optimized for traversing relationships, not for storing massive dense blobs of text or unlinked, dense time-series events. 
+
+- The Check-in Time-Series: The `checkin.json` data consists of massive comma-separated strings of dates. Creating a distinct `(:Checkin)` node for every single visit would unnecessarily explode the graph horizontally by millions of nodes. This would dramatically increase traversal times (node hopping) without adding significant structural analytical value to our graph network. We chose to handle this data type by leaving it in the document-oriented paradigm of MongoDB, acknowledging that time-series arrays fit poorly into Property Graphs.
+- Review Content: Large textual paragraphs (the `text` field in reviews) do not natively map to structural graph edges. Storing 500-word essays as properties on nodes heavily bloats the memory footprint of the graph during rapid traversals if the application attempts to load full nodes into RAM. While we retain the `text` property on the `(:Review)` node to strictly preserve the data, our modeling intentionally isolates this "unnatural" graphical data, focusing our structural traversal logic purely on the lightweight scalar properties (`stars`, `date`, `useful`).

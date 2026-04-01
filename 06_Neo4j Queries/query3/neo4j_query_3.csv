@@ -1,0 +1,305 @@
+userName,distinctCities,city,cityMeanStars
+Karen,37,Media,3.5625
+Karen,37,Doylestown,3.727272727272727
+Karen,37,Philadelphia,3.8557692307692304
+Karen,37,Springfield,3.2
+Karen,37,Wayne,4.0
+Karen,37,Drexel Hill,5.0
+Karen,37,Broomall,2.8333333333333335
+Karen,37,Wilmington,3.6666666666666665
+Karen,37,Newtown Square,3.5
+Karen,37,Glen Mills,3.8
+Karen,37,Sellersville,5.0
+Karen,37,Aston,3.7777777777777777
+Karen,37,Brookhaven,3.2
+Karen,37,Blue Bell,3.0
+Karen,37,Paoli,4.0
+Karen,37,Ardmore,3.5
+Karen,37,Newtown,3.6666666666666665
+Karen,37,King of Prussia,3.0
+Karen,37,Chalfont,3.5
+Karen,37,Buckingham,5.0
+Karen,37,Upper Darby,4.0
+Karen,37,Primos,5.0
+Karen,37,Dublin,5.0
+Karen,37,Willow Grove,4.0
+Karen,37,Devon,4.0
+Karen,37,Bala Cynwyd,4.0
+Karen,37,Chadds Ford,4.0
+Karen,37,Newark,3.0
+Karen,37,East Norriton,4.0
+Karen,37,Jenkintown,4.0
+Karen,37,King Of Prussia,4.0
+Karen,37,Feasterville-Trevose,5.0
+Karen,37,Haddonfield,3.0
+Karen,37,Montgomeryville,3.0
+Karen,37,Bryn Mawr,4.0
+Karen,37,Malvern,3.0
+Karen,37,Kennett Square,3.0
+Gerald,35,Newtown,3.947368421052632
+Gerald,35,Huntingdon Valley,4.0
+Gerald,35,Philadelphia,4.0740740740740735
+Gerald,35,Doylestown,4.0
+Gerald,35,Phoenixville,4.0
+Gerald,35,Willow Grove,4.0
+Gerald,35,Trenton,3.6363636363636362
+Gerald,35,Warminster,2.0
+Gerald,35,Hatboro,5.0
+Gerald,35,Bensalem,4.0
+Gerald,35,Fairless Hills,3.75
+Gerald,35,Richboro,3.5
+Gerald,35,Norristown,2.0
+Gerald,35,Holland,3.5
+Gerald,35,Feasterville-Trevose,3.0
+Gerald,35,Morrisville,2.0
+Gerald,35,Bordentown,4.0
+Gerald,35,Levittown,3.3333333333333335
+Gerald,35,Langhorne,3.6
+Gerald,35,Yardley,2.5
+Gerald,35,Churchville,5.0
+Gerald,35,Ewing,4.0
+Gerald,35,Glenside,4.0
+Gerald,35,Feasterville,4.0
+Gerald,35,Washington Crossing,5.0
+Gerald,35,Riverside,5.0
+Gerald,35,Bristol,4.5
+Gerald,35,Ardmore,5.0
+Gerald,35,Mercerville,3.0
+Gerald,35,Westampton,3.0
+Gerald,35,Collingswood,2.0
+Gerald,35,East Norriton,3.0
+Gerald,35,Blue Bell,4.0
+Gerald,35,Southampton,5.0
+Gerald,35,Hamilton Township,1.0
+Tricia,35,Glassboro,5.0
+Tricia,35,Clementon,4.25
+Tricia,35,Mount Laurel,3.5
+Tricia,35,Voorhees,4.0
+Tricia,35,West Berlin,4.0
+Tricia,35,Runnemede,4.0
+Tricia,35,Somerdale,5.0
+Tricia,35,Voorhees Township,5.0
+Tricia,35,Marlton,4.0
+Tricia,35,Maple Shade,4.0
+Tricia,35,Doylestown,5.0
+Tricia,35,Philadelphia,4.0
+Tricia,35,Cherry Hill,4.333333333333333
+Tricia,35,Moorestown,5.0
+Tricia,35,Medford,5.0
+Tricia,35,Deptford Township,5.0
+Tricia,35,Trenton,4.0
+Tricia,35,Atco,3.0
+Tricia,35,Glendora,5.0
+Tricia,35,Sicklerville,4.0
+Tricia,35,Pennsville,4.0
+Tricia,35,Mt. Laurel,2.5
+Tricia,35,Lawnside,4.0
+Tricia,35,Williamstown,4.0
+Tricia,35,Burlington,2.0
+Tricia,35,Gibbsboro,4.0
+Tricia,35,Camden,4.0
+Tricia,35,West Deptford,3.0
+Tricia,35,Deptford,3.0
+Tricia,35,Turnersville,5.0
+Tricia,35,Berlin,4.0
+Tricia,35,Collingswood,3.0
+Tricia,35,Woodbury,4.0
+Tricia,35,Gloucester Township,4.5
+Tricia,35,Blackwood,3.0
+Craig,31,Exton,4.4
+Craig,31,East Norriton,4.0
+Craig,31,Glen Mills,4.0
+Craig,31,Malvern,3.5
+Craig,31,Ardmore,4.0
+Craig,31,Bryn Mawr,3.6666666666666665
+Craig,31,Royersford,3.3333333333333335
+Craig,31,Wayne,4.0
+Craig,31,Phoenixville,3.0
+Craig,31,Devon,4.0
+Craig,31,West Chester,4.166666666666667
+Craig,31,Philadelphia,3.6666666666666665
+Craig,31,Dresher,4.0
+Craig,31,Broomall,4.0
+Craig,31,Bridgeport,4.333333333333333
+Craig,31,King of Prussia,4.0
+Craig,31,Berwyn,3.0
+Craig,31,Hatboro,4.0
+Craig,31,King Of Prussia,3.0
+Craig,31,Norristown,4.0
+Craig,31,Trenton,4.0
+Craig,31,Wynnewood,4.0
+Craig,31,Radnor,4.0
+Craig,31,Bensalem,3.0
+Craig,31,Newtown Square,3.0
+Craig,31,Saint Louis,4.0
+Craig,31,Trooper,3.0
+Craig,31,Paoli,5.0
+Craig,31,Plymouth Meeting,3.0
+Craig,31,Collegeville,5.0
+Craig,31,Wilmington,3.0
+P,31,Voorhees,4.0
+P,31,Media,3.0
+P,31,Cherry Hill,4.6
+P,31,Philadelphia,3.875
+P,31,Drexel Hill,3.6666666666666665
+P,31,Springfield,2.6666666666666665
+P,31,Bensalem,4.0
+P,31,Primos,4.0
+P,31,Brookhaven,2.0
+P,31,Primos-Secane,3.0
+P,31,Mount Ephraim,4.0
+P,31,Woodbury,4.0
+P,31,Newark,5.0
+P,31,Havertown,4.0
+P,31,Newtown Square,2.0
+P,31,Woodbury Heights,4.0
+P,31,Wilmington,3.5
+P,31,Folsom,5.0
+P,31,Exton,3.3333333333333335
+P,31,Mullica Hill,3.0
+P,31,Broomall,4.0
+P,31,Eddystone,4.0
+P,31,Downingtown,3.5
+P,31,Pennsauken,3.0
+P,31,Swarthmore,3.0
+P,31,West Chester,4.0
+P,31,Malvern,2.0
+P,31,Narberth,4.0
+P,31,Wayne,4.0
+P,31,Wynnewood,3.0
+P,31,King of Prussia,4.0
+Dave,29,Phoenixville,3.0
+Dave,29,Blue Bell,4.0
+Dave,29,Bryn Mawr,3.3333333333333335
+Dave,29,Warrington,4.0
+Dave,29,Wayne,4.2
+Dave,29,Jenkintown,3.0
+Dave,29,Philadelphia,3.6774193548387104
+Dave,29,King of Prussia,3.833333333333333
+Dave,29,Conshohocken,4.0
+Dave,29,West Chester,4.0
+Dave,29,Media,3.0
+Dave,29,Norristown,4.0
+Dave,29,Trappe,3.0
+Dave,29,Willow Grove,3.3333333333333335
+Dave,29,Newark,3.0
+Dave,29,Bridgeport,4.0
+Dave,29,Hatboro,5.0
+Dave,29,East Norriton,4.0
+Dave,29,King Of Prussia,1.0
+Dave,29,Oaks,4.0
+Dave,29,Paoli,4.0
+Dave,29,Montgomeryville,3.0
+Dave,29,Skippack,2.0
+Dave,29,Moorestown,4.0
+Dave,29,Ardmore,4.0
+Dave,29,Cherry Hill,5.0
+Dave,29,Plymouth Meeting,3.0
+Dave,29,Abington,4.0
+Dave,29,Buckingham,5.0
+James,29,Chadds Ford,4.5
+James,29,Broomall,4.0
+James,29,Philadelphia,4.476190476190475
+James,29,West Chester,4.666666666666667
+James,29,Marlton,5.0
+James,29,Aston,4.333333333333333
+James,29,Wilmington,4.666666666666667
+James,29,Mount Ephraim,5.0
+James,29,Glenolden,5.0
+James,29,Trappe,5.0
+James,29,Mendenhall,4.0
+James,29,Ridley Park,5.0
+James,29,Folcroft,4.0
+James,29,Paoli,5.0
+James,29,Bryn Mawr,5.0
+James,29,Exton,5.0
+James,29,Claymont,5.0
+James,29,Hockessin,4.0
+James,29,Media,5.0
+James,29,Brookhaven,5.0
+James,29,Pennsville,5.0
+James,29,Malvern,4.0
+James,29,Feasterville-Trevose,5.0
+James,29,Haddon Heights,5.0
+James,29,Bridgeport,5.0
+James,29,Ardmore,5.0
+James,29,Oaklyn,5.0
+James,29,Norristown,5.0
+James,29,Bristol,4.0
+Dianna,26,Palm Harbor,3.8
+Dianna,26,Temple Terrace,2.0
+Dianna,26,Oldsmar,4.0
+Dianna,26,Tampa,3.7777777777777777
+Dianna,26,Tarpon Springs,4.0
+Dianna,26,Port Richey,4.0
+Dianna,26,Pinellas Park,4.0
+Dianna,26,Clearwater,3.714285714285714
+Dianna,26,Holiday,4.5
+Dianna,26,Saint Petersburg,4.0
+Dianna,26,Safety Harbor,3.5
+Dianna,26,Dunedin,4.333333333333333
+Dianna,26,TAMPA,3.0
+Dianna,26,Nashville,3.0
+Dianna,26,NEW PORT RICHEY,3.0
+Dianna,26,New Port Richey,4.0
+Dianna,26,Hudson,4.0
+Dianna,26,Odessa,4.25
+Dianna,26,Largo,5.0
+Dianna,26,Trinity,4.0
+Dianna,26,St Petersburg,5.0
+Dianna,26,King Of Prussia,3.0
+Dianna,26,Dade City,4.0
+Dianna,26,St. Petersburg,4.0
+Dianna,26,Land O' Lakes,4.0
+Dianna,26,Brandon,4.0
+Steve,26,Wayne,3.5
+Steve,26,Springfield,3.5
+Steve,26,West Chester,4.0
+Steve,26,Glenolden,3.666666666666666
+Steve,26,Norristown,3.0
+Steve,26,Prospect Park,3.0
+Steve,26,Philadelphia,4.0
+Steve,26,New Castle,4.0
+Steve,26,Malvern,4.0
+Steve,26,Exton,4.5
+Steve,26,Ridley Park,4.0
+Steve,26,Secane,3.0
+Steve,26,King of Prussia,3.5
+Steve,26,Brookhaven,4.0
+Steve,26,Glendora,5.0
+Steve,26,Paoli,4.0
+Steve,26,Newtown Square,3.0
+Steve,26,Folsom,3.0
+Steve,26,Media,3.3333333333333335
+Steve,26,Lansdowne,5.0
+Steve,26,Essington,2.0
+Steve,26,Primos,4.0
+Steve,26,Darby,4.0
+Steve,26,Broomall,2.5
+Steve,26,Drexel Hill,4.333333333333333
+Steve,26,Collingdale,4.0
+Kathleen,25,Cherry Hill,4.0
+Kathleen,25,Philadelphia,3.8636363636363638
+Kathleen,25,Glassboro,3.5
+Kathleen,25,Pitman,4.0
+Kathleen,25,Haddonfield,4.0
+Kathleen,25,Williamstown,2.0
+Kathleen,25,New Orleans,4.25
+Kathleen,25,Lahaska,4.0
+Kathleen,25,Bryn Mawr,5.0
+Kathleen,25,Westmont,3.5
+Kathleen,25,Sewell,4.0
+Kathleen,25,Collingswood,5.0
+Kathleen,25,Kenner,2.0
+Kathleen,25,Runnemede,3.0
+Kathleen,25,Voorhees,3.0
+Kathleen,25,Merchantville,5.0
+Kathleen,25,Woolwich Twp,2.0
+Kathleen,25,Turnersville,3.0
+Kathleen,25,Swedesboro,4.0
+Kathleen,25,Mullica Hill,4.0
+Kathleen,25,Newark,3.0
+Kathleen,25,Woodstown,3.0
+Kathleen,25,Ardmore,4.0
+Kathleen,25,Medford,4.0
+Kathleen,25,Bala Cynwyd,5.0

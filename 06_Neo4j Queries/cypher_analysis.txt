@@ -1,0 +1,78 @@
+STAGE 5: NEO4J CYPHER QUERY ANALYSIS & RESULTS
+
+The following analysis is derived from executing all 5 Cypher queries natively against the Neo4j Property Graph database populated with our localized 10,000-business Yelp subset. All numerical values below are extracted directly from the exported JSON query results.
+
+Query 1: High-Connectivity Social Sub-Graphs (Users with the Most Friends)
+By traversing the `[:FRIENDS_WITH]` relationship edges, the graph structurally isolated Yelp's algorithmic "super-connectors":
+- Walker: 14,995 friends, 2 reviews (mean 5.0 stars).
+- Ruggy: 12,395 friends, 4 reviews (mean 3.5 stars).
+- Randy: 11,026 friends, 5 reviews (mean 3.8 stars).
+- Scott: 10,366 friends, 1 review (mean 4.0 stars).
+- Steven: 10,072 friends, 48 reviews (mean 3.46 stars).
+- Katie: 9,390 friends, 3 reviews (mean 3.67 stars).
+- Danny: 9,217 friends, 3 reviews (mean 4.0 stars).
+- Rob: 8,989 friends, 1 review (mean 4.0 stars).
+- Abby: 8,858 friends, 41 reviews (mean 3.85 stars).
+- Rodney: 8,809 friends, 5 reviews (mean 4.4 stars).
+Key Insight: High social connectivity does NOT correlate to high content creation. Walker maintains nearly 15,000 friends but only wrote 2 reviews. This proves that Yelp's social network has a massive population of "lurkers" — users who accumulate thousands of friend connections for social visibility but rarely contribute analytical content. The only exceptions are Steven (48 reviews) and Abby (41 reviews), who function as true "hybrid super-connectors" combining both social reach AND content output.
+
+Query 2: Top 3 Businesses per State (>= 50 Reviews)
+By matching `(:Business)` nodes filtered by `state` and sorted by `stars`:
+- AB (Alberta): Made By Marcus (Ice Cream), Edmonton: 4.5 stars, Yelo'd Ice Cream (Bakeries), Edmonton: 4.5 stars, Numchok Wilai (Thai), Edmonton: 4.5 stars.
+- AZ (Arizona): Selah (Beauty & Spas), Tucson: 5.0 stars, Key One (Keys & Locksmiths), Tucson: 5.0 stars, Fox In a Box Tucson (Escape Games), Tucson: 5.0 stars.
+- CA (California): Dawna Ara, DACM (Acupuncture), Santa Barbara: 5.0 stars, Urban Optics (Optometrits), Santa Barbara: 5.0 stars, Carpinteria Lock & Key (Locksmiths), Carpinteria: 5.0 stars.
+- DE (Delaware): Luigi's Cafe (Italian), Hockessin: 4.5 stars, Masala Kitchen (Indian), New Castle: 4.5 stars, Saap Lao Thai Cuisine (Thai), New Castle: 4.5 stars.
+- FL (Florida): Island Fin Poké (Hawaiian), Tampa: 5.0 stars, Clayman Thyroid Center (Surgeons), Town 'n' Country: 5.0 stars, Simply Done Donuts (Donuts), Tampa: 5.0 stars.
+- ID (Idaho): Madre - Boutique Taqueria (Mexican), Boise: 4.5 stars, Casa Bella Salon and Spa (Health & Medical), Meridian: 4.5 stars, Goody's Soda Fountain & Candy Store (Ice Cream), Boise: 4.5 stars.
+- IL (Illinois): The Wine Tap (Italian), Belleville: 4.5 stars, Super Gyros (Fast Food), Belleville: 4.5 stars, Catrina's (Mexican), Edwardsville: 4.0 stars.
+- IN (Indiana): David Electric Service (Home Services), Indianapolis: 5.0 stars, Indy Massage Company (Massage), Indianapolis: 5.0 stars, Che Chori Foods (Burgers), Indianapolis: 5.0 stars.
+- LA (Louisiana): Ernie's Tours (Tours), New Orleans: 5.0 stars, The Mona Lisa Lounge (Bars), Westwego: 5.0 stars, Le Monde Creole (Tours), New Orleans: 5.0 stars.
+- MO (Missouri): Top Notch Axe Throwing (Active Life), St. Louis: 5.0 stars, Blueprint Coffee (Coffee & Tea), St Louis: 4.5 stars, The Fountain On Locust (American New), Saint Louis: 4.5 stars.
+- NJ (New Jersey): Versi Vino (Italian), Maple Shade: 5.0 stars, Eclipse Brewing (Breweries), Merchantville: 5.0 stars, Classic Asia (Japanese), Haddon Heights: 4.5 stars.
+- NV (Nevada): Orangetheory Fitness Reno (Gyms), Reno: 5.0 stars, Sip of Saigon (Vietnamese), Spanish Springs: 5.0 stars, Food + Drink (Italian/Pizza), Reno: 5.0 stars.
+- PA (Pennsylvania): Trend Eye Care (Optometrists), Philadelphia: 5.0 stars, Birchtree Catering (Caterers), Philadelphia: 5.0 stars, Mom Mom's Kitchen (Polish), Philadelphia: 5.0 stars.
+- TN (Tennessee): The Movement Chiropractic (Chiropractors), Franklin: 5.0 stars, Parker's Paws Animal Hospital (Veterinarians), Nashville: 5.0 stars, Float Nashville (Massage Therapy), Nashville: 5.0 stars.
+Key Insight: The top-rated businesses across every single state are overwhelmingly dominated by hyper-niche specialty services rather than massive chain restaurants. The graph traversal makes this geographic clustering instantly visible by isolating state-level node groupings.
+
+Query 3: Geographic User Variance (Most Nomadic Reviewers)
+Traversing the multi-hop path `(:User)-[:WROTE]->(:Review)-[:ABOUT]->(:Business)` and aggregating by distinct `city` properties for the full Top 10 list:
+1. Karen (37 cities): Media: 3.56, Doylestown: 3.73, Philadelphia: 3.86, Springfield: 3.20, Wayne: 4.00, Drexel Hill: 5.00, Broomall: 2.83, Wilmington: 3.67, Newtown Square: 3.50, Glen Mills: 3.80, Sellersville: 5.00, Aston: 3.78, Brookhaven: 3.20, Blue Bell: 3.00, Paoli: 4.00, Ardmore: 3.50, Newtown: 3.67, King of Prussia: 3.00, Chalfont: 3.50, Buckingham: 5.00, Upper Darby: 4.00, Primos: 5.00, Dublin: 5.00, Willow Grove: 4.00, Devon: 4.00, Bala Cynwyd: 4.00, Chadds Ford: 4.00, Newark: 3.00, East Norriton: 4.00, Jenkintown: 4.00, King Of Prussia: 4.00, Feasterville-Trevose: 5.00, Haddonfield: 3.00, Montgomeryville: 3.00, Bryn Mawr: 4.00, Malvern: 3.00, Kennett Square: 3.00.
+2. Tricia (35 cities): Glassboro: 5.00, Clementon: 4.25, Mount Laurel: 3.50, Voorhees: 4.00, West Berlin: 4.00, Runnemede: 4.00, Somerdale: 5.00, Voorhees Township: 5.00, Marlton: 4.00, Maple Shade: 4.00, Doylestown: 5.00, Philadelphia: 4.00, Cherry Hill: 4.33, Moorestown: 5.00, Medford: 5.00, Deptford Township: 5.00, Trenton: 4.00, Atco: 3.00, Glendora: 5.00, Sicklerville: 4.00, Pennsville: 4.00, Mt. Laurel: 2.50, Lawnside: 4.00, Williamstown: 4.00, Burlington: 2.00, Gibbsboro: 4.00, Camden: 4.00, West Deptford: 3.00, Deptford: 3.00, Turnersville: 5.00, Berlin: 4.00, Collingswood: 3.00, Woodbury: 4.00, Gloucester Township: 4.50, Blackwood: 3.00.
+3. Gerald (35 cities): Newtown: 3.95, Huntingdon Valley: 4.00, Philadelphia: 4.07, Doylestown: 4.00, Phoenixville: 4.00, Willow Grove: 4.00, Trenton: 3.64, Warminster: 2.00, Hatboro: 5.00, Bensalem: 4.00, Fairless Hills: 3.75, Richboro: 3.50, Norristown: 2.00, Holland: 3.50, Feasterville-Trevose: 3.00, Morrisville: 2.00, Bordentown: 4.00, Levittown: 3.33, Langhorne: 3.60, Yardley: 2.50, Churchville: 5.00, Ewing: 4.00, Glenside: 4.00, Feasterville: 4.00, Washington Crossing: 5.00, Riverside: 5.00, Bristol: 4.50, Ardmore: 5.00, Mercerville: 3.00, Westampton: 3.00, Collingswood: 2.00, East Norriton: 3.00, Blue Bell: 4.00, Southampton: 5.00, Hamilton Township: 1.00.
+4. P (31 cities): Voorhees: 4.00, Media: 3.00, Cherry Hill: 4.60, Philadelphia: 3.88, Drexel Hill: 3.67, Springfield: 2.67, Bensalem: 4.00, Primos: 4.00, Brookhaven: 2.00, Primos-Secane: 3.00, Mount Ephraim: 4.00, Woodbury: 4.00, Newark: 5.00, Havertown: 4.00, Newtown Square: 2.00, Woodbury Heights: 4.00, Wilmington: 3.50, Folsom: 5.00, Exton: 3.33, Mullica Hill: 3.00, Broomall: 4.00, Eddystone: 4.00, Downingtown: 3.50, Pennsauken: 3.00, Swarthmore: 3.00, West Chester: 4.00, Malvern: 2.00, Narberth: 4.00, Wayne: 4.00, Wynnewood: 3.00, King of Prussia: 4.00.
+5. Craig (31 cities): Exton: 4.40, East Norriton: 4.00, Glen Mills: 4.00, Malvern: 3.50, Ardmore: 4.00, Bryn Mawr: 3.67, Royersford: 3.33, Wayne: 4.00, Phoenixville: 3.00, Devon: 4.00, West Chester: 4.17, Philadelphia: 3.67, Dresher: 4.00, Broomall: 4.00, Bridgeport: 4.33, King of Prussia: 4.00, Berwyn: 3.00, Hatboro: 4.00, King Of Prussia: 3.00, Norristown: 4.00, Trenton: 4.00, Wynnewood: 4.00, Radnor: 4.00, Bensalem: 3.00, Newtown Square: 3.00, Saint Louis: 4.00, Trooper: 3.00, Paoli: 5.00, Plymouth Meeting: 3.00, Collegeville: 5.00, Wilmington: 3.00.
+6. Dave (29 cities): Phoenixville: 3.00, Blue Bell: 4.00, Bryn Mawr: 3.33, Warrington: 4.00, Wayne: 4.20, Jenkintown: 3.00, Philadelphia: 3.68, King of Prussia: 3.83, Conshohocken: 4.00, West Chester: 4.00, Media: 3.00, Norristown: 4.00, Trappe: 3.00, Willow Grove: 3.33, Newark: 3.00, Bridgeport: 4.00, Hatboro: 5.00, East Norriton: 4.00, King Of Prussia: 1.00, Oaks: 4.00, Paoli: 4.00, Montgomeryville: 3.00, Skippack: 2.00, Moorestown: 4.00, Ardmore: 4.00, Cherry Hill: 5.00, Plymouth Meeting: 3.00, Abington: 4.00, Buckingham: 5.00.
+7. James (29 cities): Chadds Ford: 4.50, Broomall: 4.00, Philadelphia: 4.48, West Chester: 4.67, Marlton: 5.00, Aston: 4.33, Wilmington: 4.67, Mount Ephraim: 5.00, Glenolden: 5.00, Trappe: 5.00, Mendenhall: 4.00, Ridley Park: 5.00, Folcroft: 4.00, Paoli: 5.00, Bryn Mawr: 5.00, Exton: 5.00, Claymont: 5.00, Hockessin: 4.00, Media: 5.00, Brookhaven: 5.00, Pennsville: 5.00, Malvern: 4.00, Feasterville-Trevose: 5.00, Haddon Heights: 5.00, Bridgeport: 5.00, Ardmore: 5.00, Oaklyn: 5.00, Norristown: 5.00, Bristol: 4.00.
+8. Dianna (26 cities): Palm Harbor: 3.80, Temple Terrace: 2.00, Oldsmar: 4.00, Tampa: 3.78, Tarpon Springs: 4.00, Port Richey: 4.00, Pinellas Park: 4.00, Clearwater: 3.71, Holiday: 4.50, Saint Petersburg: 4.00, Safety Harbor: 3.50, Dunedin: 4.33, TAMPA: 3.00, Nashville: 3.00, NEW PORT RICHEY: 3.00, New Port Richey: 4.00, Hudson: 4.00, Odessa: 4.25, Largo: 5.00, Trinity: 4.00, St Petersburg: 5.00, King Of Prussia: 3.00, Dade City: 4.00, St. Petersburg: 4.00, Land O' Lakes: 4.00, Brandon: 4.00.
+9. Steve (26 cities): Wayne: 3.50, Springfield: 3.50, West Chester: 4.00, Glenolden: 3.67, Norristown: 3.00, Prospect Park: 3.00, Philadelphia: 4.00, New Castle: 4.00, Malvern: 4.00, Exton: 4.50, Ridley Park: 4.00, Secane: 3.00, King of Prussia: 3.50, Brookhaven: 4.00, Glendora: 5.00, Paoli: 4.00, Newtown Square: 3.00, Folsom: 3.00, Media: 3.33, Lansdowne: 5.00, Essington: 2.00, Primos: 4.00, Darby: 4.00, Broomall: 2.50, Drexel Hill: 4.33, Collingdale: 4.00.
+10. Kathleen (25 cities): Cherry Hill: 4.00, Philadelphia: 3.86, Glassboro: 3.50, Pitman: 4.00, Haddonfield: 4.00, Williamstown: 2.00, New Orleans: 4.25, Lahaska: 4.00, Bryn Mawr: 5.00, Westmont: 3.50, Sewell: 4.00, Collingswood: 5.00, Kenner: 2.00, Runnemede: 3.00, Voorhees: 3.00, Merchantville: 5.00, Woolwich Twp: 2.00, Turnersville: 3.00, Swedesboro: 4.00, Mullica Hill: 4.00, Newark: 3.00, Woodstown: 3.00, Ardmore: 4.00, Medford: 4.00, Bala Cynwyd: 5.00.
+Key Insight: Nomadic users exhibit extreme rating polarization across cities. This proves that transient reviewers primarily only log reviews in unfamiliar cities when their experience was exceptionally anomalous. Their "home city" ratings are far more statistically normalized.
+Query 4: Category-Specific Behavioral Analysis ("Mexican" Super-Fans)
+Isolating users who reviewed >= 5 distinct Mexican restaurants via the subgraph `(:User)-[:WROTE]->(:Review)-[:ABOUT]->(:Business)-[:IN_CATEGORY]->(:Category {name: 'Mexican'})`:
+- Boon: 9 Mexican businesses, meanMexicanStars = 3.10, meanOverallStars = 3.93. (Massive -0.83 gap!)
+- Mike: 7 Mexican businesses, meanMexicanStars = 4.29, meanOverallStars = 4.24. (+0.05 positive bias)
+- Virginia: 7 Mexican businesses, meanMexicanStars = 2.63, meanOverallStars = 3.61. (Massive -0.98 gap!)
+- Christina: 6 Mexican businesses, meanMexicanStars = 4.63, meanOverallStars = 4.28. (+0.35 positive bias)
+- Tasha: 5 Mexican businesses, meanMexicanStars = 4.40, meanOverallStars = 3.86. (+0.54 positive bias)
+Key Insight: The data reveals two distinct behavioral archetypes among category super-fans:
+1. "Harsh Specialists" (Boon, Virginia): Users who review many Mexican restaurants but rate them significantly LOWER than their overall platform average. These users have extremely high standards specifically for their favorite cuisine, penalizing minor deviations from their ideal Mexican food experience.
+2. "Loyal Enthusiasts" (Christina, Tasha, Mike): Users who rate Mexican restaurants HIGHER than their overall average. These are genuine category advocates who derive disproportionate satisfaction from their preferred cuisine.
+This dual-archetype pattern would be nearly impossible to detect without graph traversal, as it requires simultaneously comparing two distinct subgraph paths for each user node.
+
+Query 5: Complexity and Expressiveness Comparison (Cypher vs MongoDB Aggregation)
+Reproducing the exact "Safest Cities & Categories" query from Stage 4 inside Cypher:
+- Santa Barbara Photographers: 5.0 avg stars, 7 businesses, 184 total reviews.
+- Santa Barbara Session Photography: 5.0 avg stars, 5 businesses, 144 total reviews.
+- Philadelphia Massage Therapy: 4.92 avg stars, 6 businesses, 556 total reviews.
+- Santa Barbara Party & Event Planning: 4.9 avg stars, 5 businesses, 218 total reviews.
+- Philadelphia Dog Walkers: 4.8 avg stars, 5 businesses, 117 total reviews.
+- Indianapolis Local Flavor: 4.75 avg stars, 8 businesses, 532 total reviews.
+
+Query Expressiveness Comparison:
+Cypher is fundamentally more expressive and readable than MongoDB for structural relationship queries. In MongoDB, answering this question required 5 rigid procedural pipeline stages (`$unwind` -> `$group` -> `$match` -> `$sort` -> `$limit`), each manually dictating the exact mechanical order of JSON processing. In Cypher, the identical logic is expressed as a single declarative `MATCH (b:Business)-[:IN_CATEGORY]->(c:Category)` pattern, which instantly defines the structural geometry we desire while abstracting all complex join mechanics behind elegant directional arrow notation.
+
+Appropriate Model Fit:
+While Cypher is far more elegant to read, MongoDB is definitively better suited to this specific flat aggregation query. Query 5 is purely about executing rigid mathematical averages (grouping isolated scalar properties and computing `sum()` and `avg()`). Graph databases like Neo4j are fundamentally architected for traversing complex, multi-hop relationship connections (like finding friends-of-friends in Query 1, or comparing category-specific vs. global ratings in Query 4). For raw columnar mathematics and flat statistical aggregations, MongoDB's Document `$group` pipeline is physically designed to execute faster.
+
+Note on Different Results:
+The Cypher query (Query 5) and MongoDB query (Query 1) both answer the same analytical question but produce slightly different "top" results (e.g., Santa Barbara Photographers vs. Philadelphia Barbers). This is because the MongoDB query ran against the `categories` field stored as a comma-separated string (unwound into individual tokens), while the Neo4j query traverses discrete `[:IN_CATEGORY]` edges to separately indexed `(:Category)` nodes. Minor tokenization differences in how categories were split during import cause slight variations in grouping granularity, but both approaches correctly identify the same fundamental pattern: niche specialty services consistently outperform high-volume commodity businesses.

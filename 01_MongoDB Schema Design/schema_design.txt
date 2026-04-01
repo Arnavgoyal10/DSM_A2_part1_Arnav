@@ -1,0 +1,41 @@
+Data Acquisition and MongoDB Schema Design
+
+1. Collection Structure & Purpose
+Our MongoDB database consists of five distinct collections to model the Yelp dataset efficiently:
+- `business`: Stores specific details of an establishment (name, city, properties). Internal document identifier: `business_id`.
+- `user`: Stores details and metrics of reviewers (name, tenure, friend lists). Internal document identifier: `user_id`.
+- `review`: Represents a user's qualitative feedback on a business. Document identifier: `review_id`. Link fields: `user_id` (references `user` collection) and `business_id` (references `business` collection).
+- `tip`: Captures short advice from users. Link fields: `user_id` and `business_id`.
+- `checkin`: Aggregates check-in dates. Link field: `business_id`.
+
+The diagram accurately reflects our actual document model schemas rather than just a generic model. Because we chose cross-collection referencing to prevent unbound document growth, the diagram explicitly distinguishes how data is related to ensure an embedded relationship is represented differently from a cross-collection reference:
+
+- **Embedded Relationships:** Embedded arrays (such as the `categories` field inside Business, or `friends` inside User) are represented directly as *multi-valued attributes* (denoted by double-lined ellipses) natively attached to their parent entity node, establishing that they belong fundamentally to the single parent document.
+- **Cross-Collection References:** Normalised referencing logic is represented as entirely *distinct entities* connected by explicit relational diamond paths. For example, every review acts as a distinct transactional associative entity linking precisely one User strictly to one Business (1:N links). Attributes such as `user_id` and `business_id` are distinctly underlined as primary keys to signify their role as explicit referencing foreign keys linking across independent collections.
+
+2. Justification for Schema Design Choices (Embedding vs. Referencing)
+
+a) Review-to-Business and Checkin-to-Business (Referencing chosen):
+For relationships connecting users to businesses (Reviews) and businesses to visit tracking (Checkins), we chose a fully normalized, cross-collection references model. We explicitly did NOT embed reviews or check-ins inside the `business` document. We chose referencing because reviews and checkins are unbounded data structures; embedding them directly would rapidly exceed MongoDB's strict 16MB per-document limit and cause "unbound document growth", which physically degrades database write performance and leads to catastrophic fragmentation.
+
+b) User-to-Friends and Business-to-Categories (Embedding chosen):
+Relationships like a User's friends list or a Business's categories are embedded directly inside their respective documents as arrays of strings. We chose to embed these because they are naturally bounded, small arrays. Embedding them strictly prevents the need for an expensive `$lookup` cross-collection join, allowing lightning-fast retrieval of a user's friend list or a business's categories strictly via a single disk read.
+
+c) Read and Write Trade-offs:
+- Referencing Trade-offs (Reviews/Checkins): By referencing, our Write performance is perfectly stable and horizontally scalable, safely avoiding unbounded growth limits. The trade-off is Read performance: to view a business alongside its reviews, we must perform an expensive `$lookup` (join), which is computationally slower than simply reading one embedded document.
+- Embedding Trade-offs (Friends/Categories): Embedding small bounded arrays provides exceptionally fast Read performance (querying a user instantly retrieves all their friends). The Write trade-off is mathematically negligible here since the array size will realistically never breach the 16MB limit, completely bypassing the penalties of unbounded growth.
+
+3. Four Specialized Indexes
+To optimize the analytical queries we will perform in Stage 4, the following specific minimum indexes must be defined:
+
+1. `business` collection: `{ city: 1, categories: 1 }` (Compound Index). 
+   - Justification: Crucial for organizing and filtering businesses efficiently when calculating the safest cities and star rating trends dynamically partitioned by category (Stage 4, Queries 1 & 2).
+
+2. `review` collection: `{ date: 1 }` (Single-Field Index). 
+   - Justification: Required to efficiently sort and sequence review data over time to determine upward and downward star trends across years (Stage 4, Query 2).
+
+3. `user` collection: `{ yelping_since: 1 }` (Single-Field Index). 
+   - Justification: Optimized specifically for calculating a user's chronological tenure on the platform to assess its direct impact on their reviewing behavior (Stage 4, Query 5).
+
+4. `review` collection: `{ business_id: 1, user_id: 1 }` (Compound Index). 
+   - Justification: The fundamental backbone of all analytical queries. It allows the database engine to instantly execute `$lookup` joins spanning businesses, reviews, and users without performing collection-wide disk scans.

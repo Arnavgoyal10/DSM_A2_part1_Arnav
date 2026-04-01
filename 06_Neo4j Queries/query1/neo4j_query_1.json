@@ -1,0 +1,62 @@
+[
+  {
+    "userName": "Walker",
+    "friendCount": 14995,
+    "totalReviews": 2,
+    "meanStarsGiven": 5.0
+  },
+  {
+    "userName": "Ruggy",
+    "friendCount": 12395,
+    "totalReviews": 4,
+    "meanStarsGiven": 3.5
+  },
+  {
+    "userName": "Randy",
+    "friendCount": 11026,
+    "totalReviews": 5,
+    "meanStarsGiven": 3.8
+  },
+  {
+    "userName": "Scott",
+    "friendCount": 10366,
+    "totalReviews": 1,
+    "meanStarsGiven": 4.0
+  },
+  {
+    "userName": "Steven",
+    "friendCount": 10072,
+    "totalReviews": 48,
+    "meanStarsGiven": 3.4583333333333344
+  },
+  {
+    "userName": "Katie",
+    "friendCount": 9390,
+    "totalReviews": 3,
+    "meanStarsGiven": 3.6666666666666665
+  },
+  {
+    "userName": "Danny",
+    "friendCount": 9217,
+    "totalReviews": 3,
+    "meanStarsGiven": 4.0
+  },
+  {
+    "userName": "Rob",
+    "friendCount": 8989,
+    "totalReviews": 1,
+    "meanStarsGiven": 4.0
+  },
+  {
+    "userName": "Abby",
+    "friendCount": 8858,
+    "totalReviews": 41,
+    "meanStarsGiven": 3.8536585365853657
+  },
+  {
+    "userName": "Rodney",
+    "friendCount": 8809,
+    "totalReviews": 5,
+    "meanStarsGiven": 4.4
+  }
+]

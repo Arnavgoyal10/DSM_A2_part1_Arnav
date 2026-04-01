@@ -1,0 +1,332 @@
+[
+  {
+    "userName": "Boon",
+    "mexBizCount": 9,
+    "meanMexicanStars": 3.1,
+    "meanOverallStars": 3.929824561403509
+  },
+  {
+    "userName": "Mike",
+    "mexBizCount": 7,
+    "meanMexicanStars": 4.285714285714286,
+    "meanOverallStars": 4.236842105263159
+  },
+  {
+    "userName": "Marielle",
+    "mexBizCount": 7,
+    "meanMexicanStars": 4.0,
+    "meanOverallStars": 4.040983606557376
+  },
+  {
+    "userName": "Steve",
+    "mexBizCount": 7,
+    "meanMexicanStars": 3.571428571428571,
+    "meanOverallStars": 3.7464788732394365
+  },
+  {
+    "userName": "Isabella",
+    "mexBizCount": 7,
+    "meanMexicanStars": 3.75,
+    "meanOverallStars": 4.25
+  },
+  {
+    "userName": "Karen",
+    "mexBizCount": 7,
+    "meanMexicanStars": 3.5,
+    "meanOverallStars": 3.7614678899082574
+  },
+  {
+    "userName": "Kelleigh",
+    "mexBizCount": 7,
+    "meanMexicanStars": 3.75,
+    "meanOverallStars": 4.0588235294117645
+  },
+  {
+    "userName": "Brett",
+    "mexBizCount": 7,
+    "meanMexicanStars": 4.0,
+    "meanOverallStars": 4.200000000000003
+  },
+  {
+    "userName": "Angela",
+    "mexBizCount": 7,
+    "meanMexicanStars": 3.6666666666666665,
+    "meanOverallStars": 4.2142857142857135
+  },
+  {
+    "userName": "Virginia",
+    "mexBizCount": 7,
+    "meanMexicanStars": 2.625,
+    "meanOverallStars": 3.6136363636363633
+  },
+  {
+    "userName": "Jay",
+    "mexBizCount": 6,
+    "meanMexicanStars": 4.166666666666667,
+    "meanOverallStars": 4.285714285714286
+  },
+  {
+    "userName": "Christina",
+    "mexBizCount": 6,
+    "meanMexicanStars": 4.625,
+    "meanOverallStars": 4.284090909090904
+  },
+  {
+    "userName": "Michael",
+    "mexBizCount": 6,
+    "meanMexicanStars": 3.1250000000000004,
+    "meanOverallStars": 3.56
+  },
+  {
+    "userName": "Brad",
+    "mexBizCount": 6,
+    "meanMexicanStars": 4.0,
+    "meanOverallStars": 4.1923076923076925
+  },
+  {
+    "userName": "Shannon",
+    "mexBizCount": 6,
+    "meanMexicanStars": 2.5,
+    "meanOverallStars": 3.019230769230769
+  },
+  {
+    "userName": "Eli",
+    "mexBizCount": 6,
+    "meanMexicanStars": 4.0,
+    "meanOverallStars": 4.124999999999999
+  },
+  {
+    "userName": "Peter",
+    "mexBizCount": 6,
+    "meanMexicanStars": 3.166666666666667,
+    "meanOverallStars": 3.535211267605634
+  },
+  {
+    "userName": "Ken",
+    "mexBizCount": 6,
+    "meanMexicanStars": 4.2857142857142865,
+    "meanOverallStars": 4.282608695652173
+  },
+  {
+    "userName": "Samantha",
+    "mexBizCount": 6,
+    "meanMexicanStars": 3.5,
+    "meanOverallStars": 3.7391304347826084
+  },
+  {
+    "userName": "Dr Tim L",
+    "mexBizCount": 6,
+    "meanMexicanStars": 3.1666666666666665,
+    "meanOverallStars": 3.1999999999999997
+  },
+  {
+    "userName": "Todd",
+    "mexBizCount": 6,
+    "meanMexicanStars": 3.5,
+    "meanOverallStars": 3.837837837837838
+  },
+  {
+    "userName": "Karen",
+    "mexBizCount": 6,
+    "meanMexicanStars": 3.833333333333333,
+    "meanOverallStars": 3.8936170212765955
+  },
+  {
+    "userName": "Kim",
+    "mexBizCount": 6,
+    "meanMexicanStars": 3.3333333333333335,
+    "meanOverallStars": 4.133333333333333
+  },
+  {
+    "userName": "Tricia",
+    "mexBizCount": 6,
+    "meanMexicanStars": 3.857142857142857,
+    "meanOverallStars": 4.000000000000001
+  },
+  {
+    "userName": "Charles",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.0,
+    "meanOverallStars": 3.0468750000000004
+  },
+  {
+    "userName": "Mark",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.333333333333333,
+    "meanOverallStars": 3.4175824175824183
+  },
+  {
+    "userName": "Tasha",
+    "mexBizCount": 5,
+    "meanMexicanStars": 4.4,
+    "meanOverallStars": 3.857142857142857
+  },
+  {
+    "userName": "Lemonjelly",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.625,
+    "meanOverallStars": 3.9090909090909096
+  },
+  {
+    "userName": "Mark",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.1666666666666665,
+    "meanOverallStars": 3.4827586206896552
+  },
+  {
+    "userName": "Paul",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.8,
+    "meanOverallStars": 4.227272727272728
+  },
+  {
+    "userName": "Michelle",
+    "mexBizCount": 5,
+    "meanMexicanStars": 4.2,
+    "meanOverallStars": 4.307692307692308
+  },
+  {
+    "userName": "Todd",
+    "mexBizCount": 5,
+    "meanMexicanStars": 4.2,
+    "meanOverallStars": 3.7777777777777777
+  },
+  {
+    "userName": "Jeremy",
+    "mexBizCount": 5,
+    "meanMexicanStars": 4.2,
+    "meanOverallStars": 4.45
+  },
+  {
+    "userName": "Lauren",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.2,
+    "meanOverallStars": 3.85
+  },
+  {
+    "userName": "Peter",
+    "mexBizCount": 5,
+    "meanMexicanStars": 2.4,
+    "meanOverallStars": 3.107142857142857
+  },
+  {
+    "userName": "Sheena",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.4,
+    "meanOverallStars": 3.8863636363636367
+  },
+  {
+    "userName": "Christopher",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.8,
+    "meanOverallStars": 4.5
+  },
+  {
+    "userName": "Peg",
+    "mexBizCount": 5,
+    "meanMexicanStars": 4.0,
+    "meanOverallStars": 4.250000000000001
+  },
+  {
+    "userName": "Ray",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.6,
+    "meanOverallStars": 3.166666666666667
+  },
+  {
+    "userName": "Mark",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.6,
+    "meanOverallStars": 3.7142857142857144
+  },
+  {
+    "userName": "Michael",
+    "mexBizCount": 5,
+    "meanMexicanStars": 4.285714285714286,
+    "meanOverallStars": 4.390804597701149
+  },
+  {
+    "userName": "Jen",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.1666666666666665,
+    "meanOverallStars": 3.5333333333333328
+  },
+  {
+    "userName": "Tough",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.0,
+    "meanOverallStars": 3.1999999999999997
+  },
+  {
+    "userName": "John",
+    "mexBizCount": 5,
+    "meanMexicanStars": 4.333333333333334,
+    "meanOverallStars": 4.092592592592593
+  },
+  {
+    "userName": "Tracy",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.8,
+    "meanOverallStars": 3.8
+  },
+  {
+    "userName": "Rachel",
+    "mexBizCount": 5,
+    "meanMexicanStars": 4.0,
+    "meanOverallStars": 4.032967032967033
+  },
+  {
+    "userName": "EJ",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.0,
+    "meanOverallStars": 3.5625
+  },
+  {
+    "userName": "Nick",
+    "mexBizCount": 5,
+    "meanMexicanStars": 4.2,
+    "meanOverallStars": 4.136986301369863
+  },
+  {
+    "userName": "Kelsi",
+    "mexBizCount": 5,
+    "meanMexicanStars": 4.166666666666667,
+    "meanOverallStars": 4.5
+  },
+  {
+    "userName": "Robert",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.2,
+    "meanOverallStars": 3.782608695652174
+  },
+  {
+    "userName": "Dianna",
+    "mexBizCount": 5,
+    "meanMexicanStars": 4.2,
+    "meanOverallStars": 3.8979591836734695
+  },
+  {
+    "userName": "michelle",
+    "mexBizCount": 5,
+    "meanMexicanStars": 4.0,
+    "meanOverallStars": 3.926470588235295
+  },
+  {
+    "userName": "Danny",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.8,
+    "meanOverallStars": 3.8076923076923075
+  },
+  {
+    "userName": "Simon",
+    "mexBizCount": 5,
+    "meanMexicanStars": 3.8,
+    "meanOverallStars": 3.8
+  },
+  {
+    "userName": "Adam",
+    "mexBizCount": 5,
+    "meanMexicanStars": 4.4,
+    "meanOverallStars": 4.159999999999999
+  }
+]

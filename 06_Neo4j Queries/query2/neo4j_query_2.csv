@@ -1,0 +1,43 @@
+state,businessName,categories,city,avgStars
+AB,Made By Marcus,"[Food, Ice Cream & Frozen Yogurt]",Edmonton,4.5
+AB,Yelo'd Ice Cream,"[Food, Bakeries, Ice Cream & Frozen Yogurt]",Edmonton,4.5
+AB,Numchok Wilai,"[Restaurants, Thai]",Edmonton,4.5
+AZ,Selah,"[Beauty & Spas, Hair Removal, Skin Care, Waxing, Eyelash Service]",Tucson,5.0
+AZ,Key One,"[Home Services, Keys & Locksmiths]",Tucson,5.0
+AZ,Fox In a Box Tucson,"[Active Life, Arts & Entertainment, Escape Games]",Tucson,5.0
+CA,"Dawna Ara, DACM, LAc","[Traditional Chinese Medicine, Acupuncture, Health & Medical, Beauty & Spas, Skin Care, Massage]",Santa Barbara,5.0
+CA,Urban Optics Optometric Center,"[Doctors, Health & Medical, Shopping, Ophthalmologists, Eyewear & Opticians, Optometrists, Laser Eye Surgery/Lasik, Sunglasses]",Santa Barbara,5.0
+CA,Carpinteria Lock & Key,"[Home Services, Keys & Locksmiths, Security Systems]",Carpinteria,5.0
+DE,Luigi's Cafe,"[Restaurants, Italian, Pizza, Salad, Cheesesteaks]",Hockessin,4.5
+DE,Masala Kitchen,"[Restaurants, Food, Specialty Food, Fruits & Veggies, Vegan, Ethnic Food, Vegetarian, Indian]",New Castle,4.5
+DE,Saap Lao Thai Cuisine,"[Restaurants, Thai, Laotian]",New Castle,4.5
+FL,Island Fin Poké,"[Restaurants, Food, Hawaiian, Gluten-Free, Poke]",Tampa,5.0
+FL,Clayman Thyroid Center,"[Doctors, Health & Medical, Oncologist, Surgeons]",Town 'n' Country,5.0
+FL,Simply Done Donuts,"[Food, Coffee & Tea, Event Planning & Services, Caterers, Donuts]",Tampa,5.0
+ID,Madre - Boutique Taqueria,"[Restaurants, Food, Breakfast & Brunch, Event Planning & Services, Beer, Wine & Spirits, Mexican, Tacos, Personal Chefs]",Boise,4.5
+ID,Casa Bella Salon and Spa,"[Health & Medical, Hair Salons, Beauty & Spas, Skin Care, Massage, Nail Salons, Massage Therapy]",Meridian,4.5
+ID,Goody's Soda Fountain & Candy Store,"[Food, Coffee & Tea, Ice Cream & Frozen Yogurt, Specialty Food, Candy Stores, Desserts]",Boise,4.5
+IL,The Wine Tap,"[Restaurants, Italian, Bars, Nightlife, Wine Bars]",Belleville,4.5
+IL,Super Gyros,"[Restaurants, Fast Food, Italian, Greek]",Belleville,4.5
+IL,Catrina's,"[Restaurants, Bars, Nightlife, Cocktail Bars, Mexican, Latin American]",Edwardsville,4.0
+IN,David Electric Service,"[Local Services, Home Services, Contractors, TV Mounting, Lighting Fixtures & Equipment, Electricians, Generator Installation/Repair, Home Network Installation]",Indianapolis,5.0
+IN,Indy Massage Company,"[Health & Medical, Beauty & Spas, Hair Removal, Skin Care, Massage, Waxing, Massage Therapy]",Indianapolis,5.0
+IN,Che Chori Foods,"[Restaurants, Food, Burgers, Pizza, Empanadas, Argentine]",Indianapolis,5.0
+LA,Ernie's Tours,"[Hotels & Travel, Tours, Walking Tours, Historical Tours]",New Orleans,5.0
+LA,The Mona Lisa Lounge,"[Bars, Nightlife]",Westwego,5.0
+LA,Le Monde Creole,"[Hotels & Travel, Tours]",New Orleans,5.0
+MO,Top Notch Axe Throwing - St Louis,"[Bars, Nightlife, Active Life, Arts & Entertainment, Axe Throwing]",St. Louis,5.0
+MO,Blueprint Coffee,"[Food, Coffee & Tea, Coffee Roasteries]",St Louis,4.5
+MO,The Fountain On Locust,"[Shopping, Restaurants, Food, Ice Cream & Frozen Yogurt, Bars, Nightlife, Cocktail Bars, Arts & Entertainment, Specialty Food, American (New), Chocolatiers & Shops, Art Galleries]",Saint Louis,4.5
+NJ,Versi Vino,"[Restaurants, Food, Italian, Bars, Nightlife, Wine Bars, Education, American (New), Beer, Wine & Spirits, Wine Tasting Classes, Tasting Classes]",Maple Shade,5.0
+NJ,Eclipse Brewing,"[Food, Breweries]",Merchantville,5.0
+NJ,Classic Asia,"[Restaurants, Japanese, Asian Fusion, Chinese]",Haddon Heights,4.5
+NV,Orangetheory Fitness Reno,"[Active Life, Fitness & Instruction, Trainers, Gyms, Boot Camps, Cardio Classes, Interval Training Gyms]",Reno,5.0
+NV,Sip of Saigon,"[Restaurants, Food, Coffee & Tea, Vietnamese, Cafes]",Spanish Springs,5.0
+NV,Food + Drink,"[Restaurants, Food, Italian, Bars, Nightlife, Breakfast & Brunch, Cocktail Bars, Pizza, Mexican, Desserts, Tacos, Waffles]",Reno,5.0
+PA,Trend Eye Care,"[Health & Medical, Shopping, Fashion, Accessories, Eyewear & Opticians, Optometrists]",Philadelphia,5.0
+PA,Birchtree Catering,"[Event Planning & Services, Caterers, Local Flavor, Wedding Planning]",Philadelphia,5.0
+PA,Mom Mom's Kitchen and Polish Food Cart,"[Restaurants, Food, Food Trucks, Street Vendors, Polish]",Philadelphia,5.0
+TN,The Movement Chiropractic & Manual Medicine,"[Health & Medical, Chiropractors, Massage Therapy]",Franklin,5.0
+TN,Parker's Paws Animal Hospital,"[Pet Services, Pets, Veterinarians, Pet Training, Pet Stores]",Nashville,5.0
+TN,Float Nashville,"[Health & Medical, Massage Therapy, Float Spa, Halotherapy]",Nashville,5.0

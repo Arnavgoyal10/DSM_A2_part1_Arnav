@@ -1,0 +1,9 @@
+Entity-Relationship Diagram Explanation
+
+The Entity-Relationship (E-R) diagram physically illustrates the normalized structure of our MongoDB subset. It features three primary interconnected entities (`User`, `Review`, `Business`) and two secondary appended entities (`Tip`, `Checkin`). 
+
+The diagram accurately reflects our actual document model schemas rather than just a generic model. Because we chose cross-collection referencing to prevent unbound document growth, the diagram explicitly distinguishes how data is related to ensure an embedded relationship is represented differently from a cross-collection reference:
+
+- **Embedded Relationships:** Embedded arrays (such as the `categories` field inside Business, or `friends` inside User) are represented directly as *multi-valued attributes* (denoted by double-lined ellipses) natively attached to their parent entity node, establishing that they belong fundamentally to the single parent document.
+- **Cross-Collection References:** Normalised referencing logic is represented as entirely *distinct entities* connected by explicit relational diamond paths. For example, every review acts as a distinct transactional associative entity linking precisely one User strictly to one Business (1:N links). Attributes such as `user_id` and `business_id` are distinctly underlined as primary keys to signify their role as explicit referencing foreign keys linking across independent collections.
+
