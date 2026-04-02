@@ -113,7 +113,8 @@ class PredictiveModelingEngine:
                 p_sub = preds[mask]
                 rmse_s = root_mean_squared_error(y_sub, p_sub)
                 mae_s = mean_absolute_error(y_sub, p_sub)
-                logging.info(f"Bucket [{bucket_name}] -> RMSE: {rmse_s:.4f} | MAE: {mae_s:.4f}")
+                r2_s = r2_score(y_sub, p_sub)
+                logging.info(f"Bucket [{bucket_name}] -> RMSE: {rmse_s:.4f} | MAE: {mae_s:.4f} | R2: {r2_s:.4f}")
 
         # Feature Importance Visualization
         import matplotlib.pyplot as plt
