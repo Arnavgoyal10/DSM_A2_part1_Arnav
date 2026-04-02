@@ -1,6 +1,5 @@
 import pymongo
 import pandas as pd
-import numpy as np
 import logging
 
 logging.basicConfig(level=logging.INFO, format="%(message)s")
@@ -49,23 +48,24 @@ class MongoPart2Query3:
         tips_df = pd.DataFrame(list(self.db.tip.aggregate(pipeline_tips)))
         tips_df.rename(columns={"_id": "business_id"}, inplace=True)
 
-        # 4. Extract Checkin counts per business
-        # Checkin collection stores dates as comma separated string
-        checkin_cursor = self.db.checkin.find({}, {"business_id": 1, "date": 1})
-        checkin_list = []
-        for c in checkin_cursor:
-            datestr = c.get('date', "")
-            count = len(datestr.split(',')) if datestr else 0
-            checkin_list.append({"business_id": c['business_id'], "checkin_count": count})
-        checkin_df = pd.DataFrame(checkin_list)
+        # 4. Extract Checkin counts per business via MongoDB aggregation
+        # Checkin collection stores all timestamps as a single comma-separated string in "date"
+        checkin_pipeline = [
+            {"$project": {"business_id": 1,
+                          "checkin_count": {"$size": {"$split": ["$date", ", "]}}}}
+        ]
+        checkin_df = pd.DataFrame(list(self.db.checkin.aggregate(checkin_pipeline)))
 
         # 5. Merge DataFrames algorithmically
         merged_df = biz_df.merge(checkin_df, on='business_id', how='left')
         merged_df = merged_df.merge(tips_df, on='business_id', how='left')
-        
+
         # Fill NaNs for missing tips/checkins with 0
         merged_df['checkin_count'] = merged_df['checkin_count'].fillna(0)
         merged_df['tip_count'] = merged_df['tip_count'].fillna(0)
+
+        # Compute per-business tip-to-review ratio
+        merged_df['tip_review_ratio'] = merged_df['tip_count'] / merged_df['review_count'].replace(0, 1)
 
         # 6. Quartile Calculation purely based on Checkin Distribution
         # The prompt defines: top quartile (high), middle two quartiles (medium), bottom quartile (low)
@@ -95,16 +95,14 @@ class MongoPart2Query3:
         for (quartile, category), group in grouped:
             mean_stars = group['stars'].mean()
             mean_reviews = group['review_count'].mean()
-            sum_tips = group['tip_count'].sum()
-            sum_reviews = group['review_count'].sum()
-            tip_ratio = (sum_tips / sum_reviews) if sum_reviews > 0 else 0
-            
+            mean_tip_ratio = group['tip_review_ratio'].mean()
+
             results.append({
                 "Quartile": quartile,
                 "Category": category,
                 "Mean_Stars": mean_stars,
                 "Mean_Review_Count": mean_reviews,
-                "Tip_to_Review_Ratio": tip_ratio
+                "Tip_to_Review_Ratio": mean_tip_ratio
             })
             
         final_df = pd.DataFrame(results)

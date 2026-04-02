@@ -12,22 +12,20 @@ db.review.aggregate([
         as: "u" } 
     },
     { $unwind: "$u" },
-    // 2. Compute date parsing natively and mathematical lengths
+    // 2. Compute date parsing natively, mathematical lengths, and binary star flags
     { $addFields: {
         user_date: { $dateFromString: { dateString: "$u.yelping_since" } },
         char_length: { $strLenCP: "$text" },
-        useful_votes: { $ifNull: ["$useful", 0] }
-    }},
-    { $addFields: {
-        cohort_year: { $year: "$user_date" }
-    }},
-    // 3. Binary isolation to extract 1-5 star distributions mathematically
-    { $addFields: {
+        useful_votes: { $ifNull: ["$useful", 0] },
         is_1: { $cond: [{ $eq: ["$stars", 1] }, 1, 0] },
         is_2: { $cond: [{ $eq: ["$stars", 2] }, 1, 0] },
         is_3: { $cond: [{ $eq: ["$stars", 3] }, 1, 0] },
         is_4: { $cond: [{ $eq: ["$stars", 4] }, 1, 0] },
         is_5: { $cond: [{ $eq: ["$stars", 5] }, 1, 0] }
+    }},
+    // 3. Extract cohort year from parsed user_date
+    { $addFields: {
+        cohort_year: { $year: "$user_date" }
     }},
     // 4. Final Aggregation bounds combining native math standard-deviations
     { $group: {
