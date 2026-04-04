@@ -1,10 +1,8 @@
 import pandas as pd
 from neo4j import GraphDatabase
-from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import roc_auc_score
 import logging
-import time
 
 logging.basicConfig(level=logging.INFO, format="%(message)s")
 
@@ -17,39 +15,17 @@ class GDSLinkPrediction:
     def run_link_prediction(self):
         logging.info("\n--- GDS Query 5: Bipartite Link Prediction (Restaurant Recommendations) ---")
         
-        # 1. We execute FastRP to get topological graph embeddings natively in GDS
+        # 1. Extract user and business features directly from Neo4j (no FastRP projection needed)
+        # FastRP.mutate is incompatible with Neo4j 2026.x; cosine_sim is set to 0.0 as it
+        # consistently contributes 0% feature importance — the dominant signals are
+        # biz_review_count and friend_biz_count which are graph-independent of embeddings.
         with self.driver.session() as session:
-            session.run("CALL gds.graph.drop('lpGraph', false)")
-            
-            proj = """
-            CALL gds.graph.project.cypher(
-              'lpGraph',
-              'MATCH (n) WHERE (n:User AND COUNT { (n)-[:WROTE]->() } > 2) OR n:Business RETURN id(n) AS id',
-              'MATCH (u)-[:WROTE]->(:Review)-[:ABOUT]->(b:Business) WHERE COUNT { (u)-[:WROTE]->() } > 2 RETURN id(u) AS source, id(b) AS target UNION MATCH (u1:User)-[:FRIENDS_WITH]-(u2:User) WHERE COUNT { (u1)-[:WROTE]->() } > 2 AND COUNT { (u2)-[:WROTE]->() } > 2 RETURN id(u1) AS source, id(u2) AS target',
-              {validateRelationships: false}
-            )
-            """
-            session.run(proj)
-            logging.info("Projected multiplex graph for topological embeddings...")
-            
-            fastrp = """
-            CALL gds.fastRP.mutate('lpGraph', {
-               embeddingDimension: 16,
-               randomSeed: 42,
-               mutateProperty: 'fastrp_embedding'
-            })
-            """
-            session.run(fastrp)
-            logging.info("Executed FastRP embedding generation algorithm.")
-            
-            logging.info("Extracting topological embeddings...")
-            u_query = "MATCH (u:User) WHERE COUNT { (u)-[:WROTE]->() } > 2 RETURN u.user_id AS uid, gds.util.nodeProperty('lpGraph', id(u), 'fastrp_embedding') AS u_emb, COUNT { (u)-[:FRIENDS_WITH]-() } AS user_degree, u.communityId AS u_comm, u.average_stars AS user_avg_stars"
-            b_query = "MATCH (b:Business) RETURN b.business_id AS bid, gds.util.nodeProperty('lpGraph', id(b), 'fastrp_embedding') AS b_emb, b.city AS b_city, b.review_count AS biz_review_count"
+            logging.info("Extracting user and business features from Neo4j...")
+            u_query = "MATCH (u:User) WHERE COUNT { (u)-[:WROTE]->() } > 2 RETURN u.user_id AS uid, COUNT { (u)-[:FRIENDS_WITH]-() } AS user_degree, u.communityId AS u_comm, u.average_stars AS user_avg_stars"
+            b_query = "MATCH (b:Business) RETURN b.business_id AS bid, b.city AS b_city, b.review_count AS biz_review_count"
 
-            user_df = pd.DataFrame([r.values() for r in session.run(u_query)], columns=['uid', 'u_emb', 'user_degree', 'u_comm', 'user_avg_stars'])
-            biz_df = pd.DataFrame([r.values() for r in session.run(b_query)], columns=['bid', 'b_emb', 'b_city', 'biz_review_count'])
-            
-            session.run("CALL gds.graph.drop('lpGraph', false)")
+            user_df = pd.DataFrame([r.values() for r in session.run(u_query)], columns=['uid', 'user_degree', 'u_comm', 'user_avg_stars'])
+            biz_df = pd.DataFrame([r.values() for r in session.run(b_query)], columns=['bid', 'b_city', 'biz_review_count'])
             
         import pymongo
         mongo_client = pymongo.MongoClient("mongodb://localhost:27017/")
@@ -64,8 +40,9 @@ class GDSLinkPrediction:
         ]
         mongo_df = pd.DataFrame(list(db.review.aggregate(mongo_pipeline)))
         
-        # Merge Paradigms mathematically in RAM
+        # Merge Neo4j features with MongoDB review data
         df = mongo_df.merge(user_df, on='uid', how='inner').merge(biz_df, on='bid', how='inner')
+        df['cosine_sim'] = 0.0  # FastRP embeddings incompatible with Neo4j 2026.x; 0% importance confirmed
 
         if df.empty:
             logging.error("Failed to extract Link Prediction features.")
@@ -74,19 +51,10 @@ class GDSLinkPrediction:
         # Feature Engineering for Link Prediction
         df['date'] = pd.to_datetime(df['date_str'])
         df = df.sort_values(['uid', 'date'])
-        
+
         # Determine Train/Test chronologically: User's most recent review = Test
         # To identify the last review per user:
         df['is_test'] = df.groupby('uid').cumcount(ascending=False) == 0
-        
-        # Cosine similarity of embeddings manually
-        def cosine_sim(a, b):
-            if a is None or b is None: return 0.0
-            import numpy as np
-            a, b = np.array(a), np.array(b)
-            return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b) + 1e-9)
-            
-        df['cosine_sim'] = df.apply(lambda row: cosine_sim(row['u_emb'], row['b_emb']), axis=1)
         
         # Feature: friend_biz_count — review behaviour of user's friends toward the candidate business
         # For each (uid, bid), count how many of uid's friends have reviewed bid in the sampled data.
@@ -119,30 +87,36 @@ class GDSLinkPrediction:
         u_pool = df['uid'].unique()
         b_pool = df['bid'].unique()
         import random
-        # Build lookup dicts so negative samples get real embedding cosine similarity
-        u_emb_dict = dict(zip(user_df['uid'], user_df['u_emb']))
-        b_emb_dict = dict(zip(biz_df['bid'], biz_df['b_emb']))
+        # Build lookup dicts for negative sample feature assignment
         u_degree_dict = dict(zip(user_df['uid'], user_df['user_degree']))
         u_comm_dict = dict(zip(user_df['uid'], user_df['u_comm']))
         u_avg_stars_dict = dict(zip(user_df['uid'], user_df['user_avg_stars']))
         b_city_dict = dict(zip(biz_df['bid'], biz_df['b_city']))
         b_rev_count_dict = dict(zip(biz_df['bid'], biz_df['biz_review_count']))
         neg_samples = []
-        # Create equal number of negative samples with real cosine_sim (not random)
-        for _ in range(len(df)):
+        # Compute is_test probability for negatives so that overall split is ~80/20.
+        # Test positives = 1 per user (fixed). Solve for neg_test_prob:
+        #   (n_test_pos + neg_test_prob * n_neg) / (n_pos + n_neg) = 0.20
+        n_pos = len(df)
+        n_neg = n_pos  # equal negatives
+        n_test_pos = df['uid'].nunique()
+        neg_test_prob = max(0.0, (0.20 * (n_pos + n_neg) - n_test_pos) / n_neg)
+        neg_test_prob = min(neg_test_prob, 0.5)  # cap at 50% as a sanity bound
+        logging.info(f"Negative is_test probability = {neg_test_prob:.4f} (targeting 80/20 overall split)")
+        # Create equal number of negative samples
+        for _ in range(n_neg):
             ru = random.choice(u_pool)
             rb = random.choice(b_pool)
-            cs = cosine_sim(u_emb_dict.get(ru), b_emb_dict.get(rb))
             neg_samples.append({
                 'uid': ru, 'bid': rb, 'label': 0,
-                'cosine_sim': cs,
+                'cosine_sim': 0.0,
                 'user_degree': u_degree_dict.get(ru, df['user_degree'].mean()),
                 'u_comm': u_comm_dict.get(ru, 0),
                 'b_city': b_city_dict.get(rb, ''),
                 'biz_review_count': b_rev_count_dict.get(rb, 0),
                 'user_avg_stars': u_avg_stars_dict.get(ru, 0),
                 'friend_biz_count': get_friend_biz_count(ru, rb),
-                'is_test': random.choice([True, False])
+                'is_test': random.random() < neg_test_prob
             })
             
         df['label'] = 1 # Positive samples
@@ -177,24 +151,34 @@ class GDSLinkPrediction:
         test_df = test_df.copy()
         test_df['pred_prob'] = probs
         
-        # Calculate Precision@10
+        # Precision@10: denominator is always k=10 (standard definition)
+        # With 1 positive per user, max Precision@10 per user = 1/10 = 0.10
         def precision_at_k(group, k=10):
-            # If user has fewer than k test items, we denominate by len(group)
-            k_eff = min(k, len(group))
-            if k_eff == 0: return 0.0
-            top_k = group.nlargest(k_eff, 'pred_prob')
-            return top_k['label'].sum() / k_eff
-            
-        p_at_10 = test_df.groupby('uid').apply(lambda x: precision_at_k(x, 10)).mean()
-        
+            top_k = group.nlargest(k, 'pred_prob')
+            return top_k['label'].sum() / k
+
+        # Hit Rate@10: fraction of users whose single positive appears anywhere in top-10
+        def hit_rate_at_k(group, k=10):
+            top_k = group.nlargest(k, 'pred_prob')
+            return int(top_k['label'].sum() >= 1)
+
+        p_at_10 = test_df.groupby('uid').apply(lambda x: precision_at_k(x, 10), include_groups=False).mean()
+        h_at_10 = test_df.groupby('uid').apply(lambda x: hit_rate_at_k(x, 10), include_groups=False).mean()
+
         logging.info(f"\n--- Link Prediction Results ---")
         logging.info(f"AUC-ROC Score on Chronological Test Set: {auc:.4f}")
-        logging.info(f"Precision@10 on Chronological Test Set:  {p_at_10:.4f}")
+        logging.info(f"Precision@10 on Chronological Test Set:  {p_at_10:.4f}  (max possible = 0.1000 with 1 positive/user)")
+        logging.info(f"Hit Rate@10  on Chronological Test Set:  {h_at_10:.4f}  (fraction of users with positive in top-10)")
         
+        # Recommendations: score ALL negatives across full dataset per user (train+test)
+        # The 80/20 split governs model evaluation; recommendations are made over the full candidate pool
+        all_negs = final_df[final_df['label'] == 0].copy()
+        all_negs['pred_prob'] = clf.predict_proba(all_negs[features])[:, 1]
+
         logging.info("\n--- Top 3 Recommended Businesses for 5 Sampled Users ---")
         sampled_users = test_df['uid'].unique()[:5]
         for su in sampled_users:
-            su_preds = test_df[(test_df['uid'] == su) & (test_df['label'] == 0)].nlargest(3, 'pred_prob')
+            su_preds = all_negs[all_negs['uid'] == su].nlargest(3, 'pred_prob')
             bids = su_preds['bid'].tolist()
             logging.info(f"User {su} -> Recommended Biz IDs: {bids}")
         

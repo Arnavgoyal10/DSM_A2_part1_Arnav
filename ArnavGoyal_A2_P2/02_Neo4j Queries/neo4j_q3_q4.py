@@ -194,15 +194,15 @@ class GDSAnalyticsPart2:
             CALL gds.betweenness.stream('betweennessGraph')
             YIELD nodeId, score
             WITH gds.util.asNode(nodeId) AS user, score AS betweenness_score
-            WITH id(user) AS uid, betweenness_score, COUNT { (user)-[:FRIENDS_WITH]-() } AS degree
-            RETURN uid, betweenness_score, degree
+            WITH user.user_id AS user_id, betweenness_score, COUNT { (user)-[:FRIENDS_WITH]-() } AS degree
+            RETURN user_id, betweenness_score, degree
             ORDER BY betweenness_score DESC
             """
             
             logging.info("Streaming Centrality Network Algebra...")
             results = session.run(bet_query)
             features = pd.DataFrame([r.values() for r in results], columns=results.keys())
-            
+
             if not features.empty:
                  import matplotlib.pyplot as plt
                  import seaborn as sns
@@ -215,22 +215,31 @@ class GDSAnalyticsPart2:
                  plt.savefig('output/gds_q4_betweenness.png', dpi=300)
                  plt.close()
                  logging.info("[!] Generated output/gds_q4_betweenness.png visualization.")
-                 
-                 top20_betweenness = set(features.nlargest(20, 'betweenness_score')['uid'])
-                 top20_degree = set(features.nlargest(20, 'degree')['uid'])
-                 
+
+                 top20_bet_df = features.nlargest(20, 'betweenness_score')
+                 top20_deg_df = features.nlargest(20, 'degree')
+
+                 logging.info("\n--- Top 20 Users by Betweenness Centrality ---")
+                 logging.info(top20_bet_df[['user_id', 'betweenness_score', 'degree']].to_string(index=False))
+                 logging.info("\n--- Top 20 Users by Degree Centrality ---")
+                 logging.info(top20_deg_df[['user_id', 'degree', 'betweenness_score']].to_string(index=False))
+
+                 top20_betweenness = set(top20_bet_df['user_id'])
+                 top20_degree = set(top20_deg_df['user_id'])
+
                  overlap = top20_betweenness.intersection(top20_degree)
-                 logging.info(f"Top 20 Overlap (Betweenness vs Degree): {len(overlap)} users.")
-                 
+                 logging.info(f"\nTop 20 Overlap (Betweenness vs Degree): {len(overlap)} users.")
+                 logging.info(f"Overlapping user_ids: {sorted(overlap)}")
+
                  bridge_users = top20_betweenness - top20_degree
-                 
+
                  def get_group_metrics(user_set, group_name):
-                     if not user_set: 
+                     if not user_set:
                          logging.info(f"No users found in {group_name}")
                          return
                      metric_q = """
-                     UNWIND $user_array AS bu
-                     MATCH (u:User) WHERE id(u) = bu
+                     UNWIND $user_array AS uid
+                     MATCH (u:User {user_id: uid})
                      OPTIONAL MATCH (u)-[:WROTE]->(r:Review)-[:ABOUT]->(b:Business)
                      OPTIONAL MATCH (b)-[:IN_CATEGORY]->(c:Category)
                      WITH u, count(DISTINCT r) AS review_vol, count(DISTINCT b.city) AS distinct_cities, count(DISTINCT c.name) AS distinct_categories
@@ -243,7 +252,8 @@ class GDSAnalyticsPart2:
                      except Exception as e:
                          logging.error(f"Failed extracting {group_name} metrics: {e}")
 
-                 logging.info(f"Bridge Users (High Betweenness, Low Degree) count: {len(bridge_users)}")
+                 logging.info(f"\nBridge Users (High Betweenness, Low Degree) count: {len(bridge_users)}")
+                 logging.info(f"Bridge user_ids: {sorted(bridge_users)}")
                  get_group_metrics(bridge_users, "Bridge Users")
                  get_group_metrics(top20_degree, "High Degree Group")
                  
